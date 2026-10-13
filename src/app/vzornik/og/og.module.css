@@ -1,0 +1,53 @@
+.card {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 1000;
+  width: 1200px;
+  height: 630px;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  align-items: center;
+  padding: 0 96px;
+}
+
+.mark {
+  width: 340px;
+  color: var(--paper);
+}
+
+.text {
+  font-family: var(--font-mark);
+  text-transform: uppercase;
+  padding-left: 40px;
+}
+
+.first {
+  font-size: 34px;
+  letter-spacing: 0.42em;
+  font-weight: 500;
+}
+
+.last {
+  font-size: 150px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.trade {
+  display: inline-block;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1.5px solid currentColor;
+  font-size: 26px;
+  letter-spacing: 0.24em;
+}
+
+.place {
+  margin-top: 40px;
+  font-family: var(--font-display);
+  text-transform: none;
+  font-style: italic;
+  font-size: 30px;
+  color: var(--ember);
+}

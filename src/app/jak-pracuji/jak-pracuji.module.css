@@ -1,0 +1,102 @@
+.kroky {
+  position: relative;
+  list-style: none;
+  display: grid;
+  gap: var(--section-tight);
+}
+
+/* Kovaná linka vlevo, spojuje všechny kroky a dole přejde do voluty */
+.kroky::before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  bottom: 4.6rem;
+  left: calc(var(--gutter) + 0.95rem);
+  width: 1.5px;
+  background: var(--coal);
+}
+
+.krok {
+  display: grid;
+  gap: var(--space-6);
+  padding-left: 3.25rem;
+}
+
+.num {
+  position: relative;
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-lead);
+  color: var(--copper-ink);
+  margin-bottom: var(--space-2);
+}
+
+/* Bod na lince u každého kroku */
+.num::before {
+  content: '';
+  position: absolute;
+  left: calc(-3.25rem + 0.95rem - 4px);
+  top: 0.55em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1.5px solid var(--coal);
+}
+
+.name {
+  font-size: var(--text-h2);
+  margin-bottom: var(--space-4);
+}
+
+.text p + p {
+  margin-top: var(--space-3);
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.pair figcaption {
+  margin-top: var(--space-2);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-sm);
+  color: var(--iron);
+}
+
+/* Nákres o kus níž než fotka: list papíru položený vedle hotové věci */
+.sketch {
+  margin-top: var(--space-6);
+}
+
+.end {
+  padding-left: calc(0.95rem - 1.7rem);
+}
+
+.endMark {
+  width: 4.2rem;
+  margin-left: -0.15rem;
+  transform: rotate(90deg) scaleY(-1);
+  color: var(--coal);
+}
+
+@media (min-width: 64rem) {
+  .krok {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: var(--space-8);
+    align-items: center;
+  }
+
+  /* Sudé kroky: fotky vlevo, text vpravo */
+  .krok:nth-child(even) .text {
+    order: 2;
+  }
+
+  .krok:nth-child(even) {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  }
+}

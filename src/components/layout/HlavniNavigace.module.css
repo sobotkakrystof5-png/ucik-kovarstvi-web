@@ -1,0 +1,169 @@
+.nav {
+  display: none;
+  margin-left: auto;
+}
+
+@media (min-width: 64rem) {
+  .nav {
+    display: block;
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 0.2rem + 1.4vw, 2rem);
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  position: static;
+}
+
+.link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.6rem 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--coal);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--heat-2);
+  text-shadow: var(--glow-text);
+}
+
+/*
+ * Aktivní sekce: krátká kovaná čára pod položkou, ne podtržení přes celou šířku.
+ * Zakončení čáry je žhavé, odkazuje na volutu bez toho, aby se kreslila.
+ */
+.link[data-active]::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.15rem;
+  width: 1.4rem;
+  height: 2px;
+  border-radius: 1px;
+  background: linear-gradient(to right, var(--coal) 55%, var(--heat-3));
+}
+
+.chevron {
+  width: 0.7rem;
+  height: auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform var(--dur-quick) var(--ease-forge);
+}
+
+.link[aria-expanded='true'] .chevron {
+  transform: rotate(180deg);
+}
+
+/* ---------- Panel Výrobky ---------- */
+
+.panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  /* Asymetrie: úvodní sloupec úzký, skupiny se rozlévají doprava */
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.8fr) 3fr;
+  gap: var(--space-7);
+  padding: var(--space-7) max(var(--gutter), calc((100vw - var(--wrap)) / 2)) var(--space-8);
+  background-color: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  box-shadow: 0 24px 40px -28px color-mix(in srgb, var(--coal) 45%, transparent);
+}
+
+.panel[hidden] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .panel:not([hidden]) {
+    animation: vysun 220ms var(--ease-forge);
+  }
+}
+
+@keyframes vysun {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+.panelIntro {
+  padding-right: var(--space-5);
+  border-right: 1px solid var(--rule);
+}
+
+.panelAll {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--coal);
+  text-decoration: none;
+}
+
+.panelNote {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--iron);
+}
+
+.groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6) var(--space-7);
+  list-style: none;
+  padding: 0;
+}
+
+.groupLink {
+  font-family: var(--font-display);
+  font-size: 1.3125rem;
+  font-weight: 450;
+  line-height: 1.2;
+  color: var(--coal);
+  text-decoration: none;
+}
+
+.cats {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-2);
+}
+
+.catLink {
+  display: inline-block;
+  padding: 0.18rem 0;
+  font-size: var(--text-sm);
+  color: var(--iron);
+  text-decoration: none;
+}
+
+.groupLink:hover,
+.panelAll:hover,
+.catLink:hover {
+  color: var(--heat-2);
+}
+
+.groupLink[aria-current='page'],
+.catLink[aria-current='page'],
+.panelAll[aria-current='page'] {
+  color: var(--copper-ink);
+}

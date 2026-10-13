@@ -1,0 +1,89 @@
+.section {
+  padding-top: var(--section-base);
+}
+
+.title {
+  margin-bottom: var(--space-6);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.list li {
+  border-bottom: 1px solid var(--rule);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  grid-template-areas:
+    'num name arrow'
+    'num desc arrow';
+  column-gap: var(--space-4);
+  align-items: baseline;
+  padding: var(--space-5) 0;
+  color: var(--coal);
+  text-decoration: none;
+}
+
+@media (min-width: 60rem) {
+  .row {
+    grid-template-columns: 4rem minmax(0, 5fr) minmax(0, 5fr) 3rem;
+    grid-template-areas: 'num name desc arrow';
+    padding: var(--space-6) 0;
+  }
+}
+
+.num {
+  grid-area: num;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--copper-ink);
+  font-variant-numeric: lining-nums;
+}
+
+.name {
+  grid-area: name;
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  line-height: 1.2;
+}
+
+.desc {
+  grid-area: desc;
+  color: var(--iron);
+}
+
+.arrow {
+  grid-area: arrow;
+  align-self: center;
+  width: 2rem;
+  justify-self: end;
+}
+
+.arrow svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform var(--dur-heat) var(--ease-forge);
+}
+
+/* Při najetí se řádek rozžhaví: název do třešňové, šipka popojede */
+.row:hover {
+  color: var(--heat-2);
+  text-shadow: none;
+}
+
+.row:hover .name {
+  text-shadow: var(--glow-text);
+}
+
+.row:hover .arrow svg {
+  transform: translateX(4px);
+  stroke: var(--heat-3);
+}

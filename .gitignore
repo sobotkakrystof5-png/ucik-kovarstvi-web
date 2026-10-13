@@ -1,0 +1,21 @@
+# závislosti a build
+node_modules/
+.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
+# tajemství: nikdy do repa (AGENTS.md §7)
+.env
+.env.*
+*.pem
+*.key
+
+# platforma a systém
+.vercel
+.DS_Store
+npm-debug.log*
+
+# lokální nastavení Claude Code
+.claude/settings.local.json

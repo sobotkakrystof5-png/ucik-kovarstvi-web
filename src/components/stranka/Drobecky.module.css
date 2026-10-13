@@ -1,0 +1,50 @@
+.nav {
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-6);
+}
+
+.nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0;
+  list-style: none;
+  padding: 0;
+}
+
+.nav li {
+  display: inline-flex;
+  align-items: center;
+  color: var(--iron);
+}
+
+/* Oddělovač: krátká kovaná čárka, ne lomítko ani šipka */
+.nav li + li::before {
+  content: '';
+  width: 0.9rem;
+  height: 1px;
+  margin: 0 0.55rem;
+  background: var(--rule);
+  background: color-mix(in srgb, var(--iron) 55%, transparent);
+}
+
+.nav a {
+  color: var(--iron);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--heat-2);
+}
+
+.nav [aria-current] {
+  color: var(--coal);
+}
+
+:global(.surface-coal) .nav li,
+:global(.surface-coal) .nav a {
+  color: var(--paper-dim);
+}
+
+:global(.surface-coal) .nav [aria-current] {
+  color: var(--paper);
+}

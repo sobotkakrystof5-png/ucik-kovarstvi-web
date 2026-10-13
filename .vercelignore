@@ -1,0 +1,7 @@
+# Interní dokumenty projektu na Vercel nepatří (build je nepotřebuje).
+memory/
+.claude/
+.github/
+CLAUDE.md
+AGENTS.md
+web-project-brief.md

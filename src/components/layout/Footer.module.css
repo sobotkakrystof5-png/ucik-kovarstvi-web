@@ -1,0 +1,101 @@
+.footer {
+  margin-top: var(--section-base);
+}
+
+/* Asymetrická mřížka 5 / 3 / 4, ne tři stejné sloupce */
+.grid {
+  display: grid;
+  gap: var(--space-7);
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-8);
+}
+
+@media (min-width: 48rem) {
+  .grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--space-6);
+  }
+
+  .about {
+    grid-column: 1 / span 5;
+  }
+
+  .links {
+    grid-column: 7 / span 2;
+  }
+
+  .contact {
+    grid-column: 9 / span 4;
+  }
+}
+
+.desc {
+  margin-top: var(--space-5);
+  max-width: 30em;
+  color: var(--paper-dim);
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--space-1);
+}
+
+.footer .links a {
+  display: inline-block;
+  padding: 0.3rem 0;
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.footer .links a:hover {
+  color: var(--heat-5);
+}
+
+.contact {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+}
+
+.phone {
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 1.4rem + 1.6vw, 2.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  font-variant-numeric: lining-nums tabular-nums;
+  text-decoration: none;
+  justify-self: start;
+}
+
+.mail {
+  justify-self: start;
+  overflow-wrap: anywhere;
+}
+
+.address {
+  margin-top: var(--space-4);
+  font-style: normal;
+}
+
+.hours {
+  font-size: var(--text-sm);
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-6);
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-6);
+  border-top: 1px solid var(--rule-dark);
+  font-size: var(--text-sm);
+  color: var(--paper-dim);
+}
+
+.bottom p {
+  margin: 0;
+  max-width: none;
+}

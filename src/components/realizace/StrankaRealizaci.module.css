@@ -1,0 +1,87 @@
+.filter {
+  margin-bottom: var(--space-7);
+  /* Na mobilu jedna vodorovná řada, která se posouvá prstem */
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-inline: calc(-1 * var(--gutter));
+  padding-inline: var(--gutter);
+}
+
+.filter::-webkit-scrollbar {
+  display: none;
+}
+
+.filter ul {
+  display: flex;
+  gap: var(--space-2);
+  list-style: none;
+  padding: 0 0 var(--space-2);
+  width: max-content;
+}
+
+@media (min-width: 64rem) {
+  .filter {
+    overflow: visible;
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
+  .filter ul {
+    flex-wrap: wrap;
+    width: auto;
+  }
+}
+
+/* Štítek jako kus pásoviny: tenký obrys, aktivní je „rozžhavený“ */
+.tag {
+  display: inline-block;
+  padding: 0.55rem 1rem 0.6rem;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  color: var(--coal);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    border-color var(--dur-heat) var(--ease-forge),
+    background-color var(--dur-heat) var(--ease-forge),
+    color var(--dur-heat) var(--ease-forge),
+    box-shadow var(--dur-heat) var(--ease-forge);
+}
+
+.tag:hover {
+  border-color: var(--heat-3);
+  color: var(--heat-2);
+  text-shadow: none;
+}
+
+.tag[aria-current='page'] {
+  border-color: var(--coal);
+  background: var(--coal);
+  color: var(--paper);
+}
+
+.tag[aria-current='page']:hover {
+  background: var(--heat-4);
+  border-color: var(--heat-4);
+  color: var(--coal);
+  box-shadow: var(--glow-soft);
+}
+
+.vyrobky {
+  margin-top: var(--space-7);
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .grid {
+    animation: objevit 320ms var(--ease-forge);
+  }
+}
+
+@keyframes objevit {
+  from {
+    opacity: 0;
+  }
+}

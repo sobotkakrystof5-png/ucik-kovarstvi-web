@@ -1,0 +1,106 @@
+.section {
+  padding-block: var(--section-tight);
+}
+
+.section > h2 {
+  margin-bottom: var(--space-6);
+}
+
+.sub {
+  margin: var(--space-7) 0 var(--space-4);
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: var(--space-5);
+  list-style: none;
+  padding: 0;
+  font-size: var(--text-sm);
+}
+
+.chip {
+  display: block;
+  height: 4.5rem;
+  margin-bottom: var(--space-2);
+  outline: 1px solid var(--rule);
+}
+
+.heat {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  font-size: var(--text-xs);
+}
+
+.heat span {
+  padding: 2.5rem 0.5rem 0.5rem;
+  color: var(--coal);
+}
+
+.heat span:nth-child(-n + 2) {
+  color: var(--paper);
+}
+
+.type {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.h1demo {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  line-height: var(--leading-display);
+  letter-spacing: -0.028em;
+  font-weight: 380;
+  font-variation-settings: 'SOFT' 30;
+  max-width: 14ch;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5) var(--space-7);
+  margin-top: var(--space-6);
+}
+
+.volutes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-7);
+  color: var(--coal);
+  margin-bottom: var(--space-7);
+}
+
+.voluteBig {
+  width: min(12rem, 45vw);
+}
+
+.voluteMid {
+  width: 7rem;
+  color: var(--iron);
+}
+
+.voluteSmall {
+  width: 3rem;
+}
+
+.dividerDemo {
+  margin-block: var(--space-6);
+}
+
+.slots {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  align-items: start;
+}
+
+.dark {
+  padding-block: var(--section-base);
+}
+
+.darkSlot {
+  margin-block: var(--space-7);
+}

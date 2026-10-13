@@ -1,0 +1,123 @@
+.akce {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--font-text);
+  font-weight: 600;
+  line-height: 1.15;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---------- Plná: studené železo, které se rozžhaví ---------- */
+
+.plna {
+  color: var(--paper);
+  /* Škála žáru je předem namalovaná v pozadí, najetí ji jen posune. */
+  background-image: linear-gradient(
+    to top,
+    var(--heat-4) 0%,
+    var(--heat-3) 22%,
+    var(--heat-2) 40%,
+    var(--heat-1) 56%,
+    var(--coal) 76%
+  );
+  background-size: 100% 420%;
+  background-position: 50% 0%;
+  background-color: var(--coal);
+  border-radius: 2px;
+  transition:
+    background-position calc(var(--dur-heat) * 1.6) var(--ease-forge),
+    color var(--dur-heat) var(--ease-forge) calc(var(--dur-heat) * 0.5),
+    box-shadow var(--dur-heat) var(--ease-forge);
+}
+
+.plna:hover,
+.plna:focus-visible {
+  color: var(--coal); /* 6,69:1 na --heat-4 */
+  text-shadow: none;
+  background-position: 50% 100%;
+  box-shadow: var(--glow-soft);
+}
+
+.plna:active {
+  /* Úder: na okamžik žár zesvětlí */
+  box-shadow:
+    0 0 0 1px var(--heat-5),
+    0 0 26px 4px color-mix(in srgb, var(--heat-4) 60%, transparent);
+}
+
+/* Na tmavé ploše má studené železo obrys, jinak by splynulo s pozadím */
+:global(.surface-coal) .plna {
+  color: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--ember);
+}
+
+:global(.surface-coal) .plna:hover,
+:global(.surface-coal) .plna:focus-visible {
+  color: var(--coal);
+  box-shadow:
+    inset 0 0 0 1px var(--heat-5),
+    var(--glow-soft);
+}
+
+.velka {
+  font-size: clamp(1.125rem, 1rem + 0.6vw, 1.375rem);
+  padding: 1.05em 1.5em 1.1em;
+}
+
+.bezna {
+  font-size: 1.0625rem;
+  padding: 0.85em 1.25em 0.9em;
+}
+
+.mala {
+  font-size: 0.9375rem;
+  padding: 0.6em 0.95em 0.65em;
+}
+
+/* ---------- Linka: textová akce s kovanou čárou pod textem ---------- */
+
+.linka {
+  color: var(--copper-ink);
+  padding: 0.35em 0;
+  background: none;
+}
+
+.linka .label {
+  background-image: linear-gradient(var(--heat-3), var(--heat-3)),
+    linear-gradient(currentColor, currentColor);
+  background-size:
+    0% 2px,
+    100% 1px;
+  background-position:
+    0 100%,
+    0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 0.2em;
+  transition: background-size calc(var(--dur-heat) * 1.4) var(--ease-forge);
+}
+
+.linka:hover .label,
+.linka:focus-visible .label {
+  /* Čára se rozžhaví zleva doprava, jako když tyč prochází výhní */
+  background-size:
+    100% 2px,
+    100% 1px;
+}
+
+.linka.velka,
+.linka.bezna,
+.linka.mala {
+  padding-inline: 0;
+}
+
+:global(.surface-coal) .linka {
+  color: var(--ember);
+}
+
+:global(.surface-coal) .linka:hover {
+  color: var(--heat-5);
+}

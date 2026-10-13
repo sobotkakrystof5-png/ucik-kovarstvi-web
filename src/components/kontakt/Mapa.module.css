@@ -1,0 +1,46 @@
+.frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--paper-shade);
+  outline: 1px solid var(--rule);
+  outline-offset: -0.6rem;
+}
+
+.frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  /* Mapa v teplém ladění webu, ne studená modrá */
+  filter: sepia(0.25) saturate(0.85);
+}
+
+.placeholder {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  text-align: center;
+  color: var(--iron);
+  font-size: var(--text-sm);
+}
+
+.mark {
+  width: 3.5rem;
+  opacity: 0.55;
+}
+
+.kind {
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+/* --copper-ink má na --paper-shade jen 3,91:1, proto text v uhlu a měď jen v podtržení. */
+.placeholder a {
+  color: var(--coal);
+  text-decoration-color: var(--copper);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}

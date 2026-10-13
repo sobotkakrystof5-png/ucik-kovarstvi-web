@@ -1,0 +1,41 @@
+.header {
+  position: relative;
+  z-index: 20;
+  border-bottom: 1px solid var(--rule);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  min-height: 5.25rem;
+  padding-block: var(--space-3);
+}
+
+.call {
+  display: none;
+}
+
+.phone {
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+@media (min-width: 64rem) {
+  .bar {
+    min-height: 6rem;
+  }
+
+  .call {
+    display: block;
+    margin-left: var(--space-4);
+  }
+}
+
+/* Na užším desktopu se do tlačítka nevejde číslo, zůstane jen „Zavolat“ */
+@media (min-width: 64rem) and (max-width: 74.99rem) {
+  .phone {
+    display: none;
+  }
+}

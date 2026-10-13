@@ -1,0 +1,78 @@
+.main {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.primary {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: start;
+}
+
+.phone {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 1.2rem + 7.4vw, 7.5rem);
+  font-weight: 360;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  font-variant-numeric: lining-nums;
+  color: var(--coal);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.phone:hover {
+  color: var(--heat-2);
+}
+
+.mail {
+  font-size: clamp(1.25rem, 1rem + 1.2vw, 2rem);
+  overflow-wrap: anywhere;
+}
+
+.facts {
+  display: grid;
+  gap: var(--space-5) var(--space-6);
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--rule);
+}
+
+.facts dt {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--copper-ink);
+  margin-bottom: var(--space-1);
+}
+
+.facts dd {
+  margin: 0;
+}
+
+.facts address {
+  font-style: normal;
+}
+
+.place {
+  display: grid;
+  gap: var(--space-6);
+  padding-top: var(--section-base);
+}
+
+@media (min-width: 64rem) {
+  .place {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--space-6);
+    align-items: start;
+  }
+
+  .map {
+    grid-column: 1 / span 7;
+  }
+
+  /* Fotka dílny níž a menší, jako fotka položená vedle mapy */
+  .photo {
+    grid-column: 8 / span 5;
+    margin-top: var(--space-9);
+  }
+}

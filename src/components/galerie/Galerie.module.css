@@ -1,0 +1,229 @@
+/* ---------- Mřížka ---------- */
+
+.grid {
+  list-style: none;
+  padding: 0;
+}
+
+/* Mozaika: sloupce s různými poměry stran (3:2, 4:5, 1:1) */
+.mozaika {
+  columns: 1;
+  column-gap: var(--space-5);
+}
+
+@media (min-width: 40rem) {
+  .mozaika {
+    columns: 2;
+  }
+}
+
+@media (min-width: 64rem) {
+  .mozaika {
+    columns: 3;
+    column-gap: var(--space-6);
+  }
+}
+
+.mozaika .item {
+  break-inside: avoid;
+  margin-bottom: var(--space-6);
+}
+
+/* Řada: jednotné 3:2 ve třech sloupcích */
+.rada {
+  display: grid;
+  gap: var(--space-6) var(--space-5);
+}
+
+@media (min-width: 40rem) {
+  .rada {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .rada {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.item {
+  scroll-margin-top: var(--space-7);
+}
+
+.open {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+/* Při najetí: malá voluta v rohu, ikonka „otevřít“ (brief §0) */
+.hover {
+  position: absolute;
+  right: 1.1rem;
+  top: 1rem;
+  width: 2.6rem;
+  padding: 0.45rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  color: var(--coal);
+  opacity: 0;
+  transform: translateY(-3px);
+  transition:
+    opacity var(--dur-heat) var(--ease-forge),
+    transform var(--dur-heat) var(--ease-forge);
+}
+
+.open:hover .hover,
+.open:focus-visible .hover {
+  opacity: 1;
+  transform: none;
+}
+
+.hoverMark {
+  width: 100%;
+}
+
+.caption {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+}
+
+/* ---------- Lightbox ---------- */
+
+.lightbox {
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.lightbox::backdrop {
+  background: color-mix(in srgb, var(--coal) 96%, transparent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lightbox[open] {
+    animation: lbIn 220ms var(--ease-forge);
+  }
+}
+
+@keyframes lbIn {
+  from {
+    opacity: 0;
+  }
+}
+
+.lbInner {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  padding: var(--space-4) var(--gutter) calc(var(--space-5) + env(safe-area-inset-bottom, 0px));
+  gap: var(--space-4);
+}
+
+.lbTop,
+.lbBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.counter {
+  font-variant-numeric: tabular-nums;
+  color: var(--paper-dim);
+  font-size: var(--text-sm);
+}
+
+.close {
+  min-height: 2.75rem;
+  padding: 0 0.25rem;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--paper);
+  font-weight: 600;
+}
+
+.figure {
+  display: grid;
+  place-content: center;
+  justify-items: start;
+  gap: var(--space-3);
+  min-height: 0;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+/* Fotka se vejde na výšku i na šířku a drží svůj poměr */
+.photo {
+  width: min(100%, calc((100dvh - 13rem) * var(--r)));
+  width: min(calc(100vw - 2 * var(--gutter)), calc((100dvh - 13rem) * var(--r)));
+}
+
+.lbCaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1rem;
+  align-items: baseline;
+  font-size: var(--text-sm);
+}
+
+.lbTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  color: var(--paper);
+}
+
+.arrows {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.arrow {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--rule-dark);
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  color: var(--paper);
+  transition:
+    border-color var(--dur-heat) var(--ease-forge),
+    color var(--dur-heat) var(--ease-forge),
+    box-shadow var(--dur-heat) var(--ease-forge);
+}
+
+.arrow:hover {
+  border-color: var(--heat-4);
+  color: var(--heat-5);
+  box-shadow: var(--glow-soft);
+}
+
+.arrow svg {
+  width: 1.2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-5);
+}

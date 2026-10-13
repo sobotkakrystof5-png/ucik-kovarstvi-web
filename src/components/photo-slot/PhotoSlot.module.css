@@ -1,0 +1,68 @@
+.slot {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--slot-ratio-mobile);
+  overflow: hidden;
+  background: var(--paper-shade);
+  /* Jemný tenký obrys, odsazený dovnitř jako paspartá */
+  outline: 1px solid var(--rule);
+  outline-offset: -0.6rem;
+}
+
+@media (min-width: 48rem) {
+  .slot {
+    aspect-ratio: var(--slot-ratio);
+  }
+}
+
+.img {
+  object-fit: cover;
+}
+
+.inner {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  text-align: center;
+  color: var(--iron);
+}
+
+.mark {
+  width: 3.25rem;
+  opacity: 0.55;
+}
+
+.label {
+  max-width: 26ch;
+  font-size: var(--text-sm);
+  line-height: 1.4;
+}
+
+.kind {
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+/* ID slotu, aby šlo fotky přiřadit podle seznamu. Drobně do rohu. */
+.id {
+  position: absolute;
+  left: 1rem;
+  top: 0.85rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Na tmavé ploše (hero, dílna) */
+.dark {
+  background: color-mix(in srgb, var(--paper) 7%, var(--coal));
+  outline-color: var(--rule-dark);
+}
+
+.dark .inner {
+  color: var(--paper-dim);
+}

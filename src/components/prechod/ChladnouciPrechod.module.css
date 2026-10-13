@@ -1,0 +1,53 @@
+.edge {
+  position: relative;
+  height: clamp(2.75rem, 1.5rem + 5vw, 5.5rem);
+  /* Vychladlý stav: uhel, který dole lehce přechází do tmavé třešňové */
+  background: linear-gradient(
+    to bottom,
+    var(--coal) 0%,
+    var(--coal) 35%,
+    color-mix(in srgb, var(--heat-1) 70%, var(--coal)) 92%,
+    var(--heat-1) 100%
+  );
+  pointer-events: none;
+}
+
+/* Žár: vrstva navíc, která při chladnutí zmizí */
+.edge::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    color-mix(in srgb, var(--heat-2) 70%, transparent) 72%,
+    var(--heat-3) 93%,
+    var(--heat-4) 99%,
+    var(--heat-5) 100%
+  );
+  opacity: 0.12;
+}
+
+.flip {
+  transform: scaleY(-1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .edge::after {
+      animation: chladnuti linear both;
+      animation-timeline: view();
+      /* Žhavé při vjezdu, vychladlé, když je hrana zhruba ve dvou třetinách obrazovky */
+      animation-range: entry 20% cover 65%;
+    }
+  }
+}
+
+@keyframes chladnuti {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.12;
+  }
+}

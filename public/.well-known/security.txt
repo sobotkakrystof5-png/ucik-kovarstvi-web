@@ -1,0 +1,6 @@
+# RFC 9116. Kontakt doplní uživatel (memory/memory.md → Otevřené otázky).
+# Bez řádku Contact není soubor platný, proto se před spuštěním musí doplnit.
+# Contact: mailto:[DOPLNÍ UŽIVATEL]
+Expires: 2027-10-05T00:00:00.000Z
+Preferred-Languages: cs, en
+Canonical: https://kovarstviucik.cz/.well-known/security.txt

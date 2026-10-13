@@ -1,0 +1,44 @@
+.bar {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  border-top: 1px solid color-mix(in srgb, var(--heat-3) 55%, var(--coal));
+}
+
+@media (min-width: 64rem) {
+  .bar {
+    display: none;
+  }
+}
+
+.bar .action {
+  display: grid;
+  place-items: center;
+  height: var(--callbar-h);
+  color: var(--paper);
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition:
+    background-color var(--dur-heat) var(--ease-forge),
+    color var(--dur-heat) var(--ease-forge);
+}
+
+.bar .action + .action {
+  border-left: 1px solid var(--rule-dark);
+}
+
+/* Zavolat je hlavní akce: o stupeň teplejší než Napsat */
+.bar .action:first-child {
+  color: var(--heat-5);
+}
+
+.bar .action:active,
+.bar .action:hover {
+  background-color: var(--heat-4);
+  color: var(--coal);
+  text-shadow: none;
+}

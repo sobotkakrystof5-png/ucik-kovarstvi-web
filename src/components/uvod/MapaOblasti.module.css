@@ -1,0 +1,82 @@
+.map {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  font-family: var(--font-text);
+}
+
+/* Hranice krajů papírem, ať mapa působí jako vyřezaná z jednoho listu */
+.kraj,
+.krajAktivni {
+  stroke: var(--paper);
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+}
+
+/* Kraje mimo oblast: jen tón papíru */
+.kraj {
+  fill: var(--paper-shade);
+}
+
+/* Kraje v oblasti: uhel. Měď při rozbalení v seznamu řeší uvod.module.css */
+.krajAktivni {
+  fill: var(--coal);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .krajAktivni {
+    transition: fill 0.25s ease;
+  }
+}
+
+.krajNazev {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  fill: var(--paper);
+  pointer-events: none;
+}
+
+.city {
+  fill: var(--paper);
+  pointer-events: none;
+}
+
+/* Papírový kroužek je vidět na uhlu i na mědi */
+.homeRing {
+  fill: var(--paper);
+  stroke: var(--coal);
+  stroke-width: 1.5;
+}
+
+.homeDot {
+  fill: var(--copper);
+}
+
+.homeLine {
+  fill: none;
+  stroke: var(--copper);
+  stroke-width: 1.5;
+}
+
+.homeLabel {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  fill: var(--copper-ink);
+  pointer-events: none;
+}
+
+/*
+ * Na úzkém displeji se mapa zmenší na polovinu. Názvy krajů by se tloukly
+ * s popiskem dílny, a seznam krajů je hned pod mapou, proto zmizí.
+ */
+@media (max-width: 47.99rem) {
+  .krajNazev {
+    display: none;
+  }
+
+  .homeLabel {
+    font-size: 28px;
+  }
+}

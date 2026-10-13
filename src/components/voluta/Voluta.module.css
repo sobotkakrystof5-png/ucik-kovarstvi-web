@@ -1,0 +1,85 @@
+/* Nulová specificita: šířku volí místo použití přes className */
+:where(.mark) {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.bar {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Žhavý bod: halo tlumené, jádro skoro bílé jako nejteplejší místo tyče */
+.emberHalo {
+  fill: var(--heat-3);
+  opacity: 0.22;
+}
+
+.emberBody {
+  fill: var(--heat-4);
+}
+
+.emberCore {
+  fill: var(--heat-6);
+}
+
+/* Bod jemně „dýchá“, jen když to uživatel dovolí. Pomalu, ať to neruší. */
+@media (prefers-reduced-motion: no-preference) {
+  .emberHalo {
+    animation: doutna 3.8s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+}
+
+@keyframes doutna {
+  0%,
+  100% {
+    opacity: 0.16;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.32;
+    transform: scale(1.08);
+  }
+}
+
+/* ---------- Oddělovač ---------- */
+
+.divider {
+  --divider-h: 2.1rem;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  color: var(--coal);
+}
+
+:global(.surface-coal) .divider {
+  color: var(--paper-dim);
+}
+
+.line {
+  flex: 1;
+  /* Linka sedí přesně na náběhu tyče: ve viewBoxu y = 36 z rozsahu 7–38 */
+  /* Tloušťka i výška odpovídají tyči ve viewBoxu (stroke 1,5 na výšce 31) */
+  height: calc(var(--divider-h) * 1.5 / 31);
+  margin-bottom: calc(var(--divider-h) * 1.25 / 31);
+  background: currentColor;
+  border-radius: 1px;
+  opacity: 0.9;
+}
+
+.end {
+  flex: none;
+  height: var(--divider-h);
+  width: auto;
+  margin-left: -1px;
+  overflow: visible;
+}
+
+.dividerFlip {
+  transform: scaleX(-1);
+}

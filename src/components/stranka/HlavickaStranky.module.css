@@ -1,0 +1,40 @@
+.head {
+  padding-top: var(--space-6);
+  padding-bottom: var(--section-tight);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.title h1 {
+  max-width: 13ch;
+}
+
+.lead > p + p {
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 60rem) {
+  .grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: end;
+    column-gap: var(--space-6);
+  }
+
+  .title {
+    grid-column: 1 / span 7;
+  }
+
+  .lead {
+    grid-column: 8 / span 5;
+    /* Úvod sedí na spodní hraně nadpisu, mírně pod ní */
+    padding-bottom: 0.6rem;
+  }
+
+  .pod .title,
+  .pod .lead {
+    grid-column: 1 / span 9;
+  }
+}

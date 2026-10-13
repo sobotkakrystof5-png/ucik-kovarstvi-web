@@ -1,0 +1,43 @@
+.hero {
+  /* Fotka přetéká přes okraj mřížky doprava, kompozice není symetrická */
+  margin-bottom: var(--section-tight);
+}
+
+@media (min-width: 84rem) {
+  .hero {
+    padding-right: 0;
+    max-width: calc(var(--wrap) + var(--gutter) + (100vw - var(--wrap)) / 2);
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.text {
+  display: grid;
+  gap: var(--space-4);
+  font-size: var(--text-lead);
+  line-height: 1.55;
+}
+
+@media (min-width: 60rem) {
+  .text p {
+    margin-left: calc(100% / 12 * 3);
+  }
+}
+
+.realizace {
+  padding-top: var(--section-base);
+}
+
+.realizaceHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-3) var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.all {
+  font-weight: 600;
+}

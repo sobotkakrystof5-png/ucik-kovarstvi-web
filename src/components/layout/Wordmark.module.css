@@ -1,0 +1,62 @@
+.mark {
+  display: inline-block;
+  color: var(--coal);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.mark:hover {
+  color: var(--coal);
+  text-shadow: none;
+}
+
+.text {
+  display: inline-grid;
+  justify-items: center;
+  font-family: var(--font-mark);
+  text-transform: uppercase;
+}
+
+.first {
+  font-size: 0.6875rem;
+  letter-spacing: 0.42em;
+  margin-right: -0.42em; /* vyrovná prostrkání na konci, aby bylo opticky na střed */
+  font-weight: 500;
+}
+
+.last {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-right: -0.12em;
+  margin-top: 0.08em;
+}
+
+.trade {
+  margin-top: 0.4em;
+  padding-top: 0.42em;
+  border-top: 1px solid currentColor;
+  font-size: 0.5625rem;
+  letter-spacing: 0.24em;
+  margin-right: -0.24em;
+  font-weight: 500;
+}
+
+/* Jméno se při najetí rozžhaví do mědi, stejně jako ostatní odkazy */
+.mark:hover .last,
+.mark:focus-visible .last {
+  color: var(--copper-ink);
+  transition: color var(--dur-heat) var(--ease-forge);
+}
+
+.dark {
+  color: var(--paper);
+}
+
+.dark:hover {
+  color: var(--paper);
+}
+
+.dark:hover .last {
+  color: var(--ember);
+}

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layout skeleton — replace all content, colors, and copy</title>
+<style>
+  /*
+    STRUCTURE-ONLY SKELETON.
+    Colors below are neutral grayscale PLACEHOLDERS ONLY — replace --bg, --fg,
+    --muted, --accent, --accent-fg with the real project's palette.
+    Fonts are system-default placeholders — replace --font-heading / --font-body.
+    Everything else (spacing scale, grid ratios, section order) is the part
+    worth keeping from the reference site.
+  */
+  :root{
+    --bg:#ffffff; --fg:#111111; --muted:#666666; --line:#e5e5e5;
+    --accent:#111111; --accent-fg:#ffffff;
+    --font-heading: system-ui, sans-serif;
+    --font-body: system-ui, sans-serif;
+    --container: 1200px;
+    --pad: 24px;
+    --space-xs: 8px; --space-sm: 16px; --space-md: 32px;
+    --space-lg: 64px; --space-xl: 120px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; font-family:var(--font-body); color:var(--fg); background:var(--bg); line-height:1.5;}
+  h1,h2,h3{font-family:var(--font-heading); margin:0 0 var(--space-sm); line-height:1.15;}
+  h1{font-size:clamp(2rem,5vw,3.5rem);}
+  h2{font-size:clamp(1.5rem,3vw,2.25rem);}
+  h3{font-size:1.1rem;}
+  p{margin:0 0 var(--space-sm); color:var(--muted);}
+  a{color:inherit;}
+  .container{max-width:var(--container); margin:0 auto; padding:0 var(--pad);}
+  .section{padding:var(--space-xl) 0;}
+  .eyebrow{display:block; font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:var(--space-xs);}
+  .btn{display:inline-block; padding:14px 28px; border-radius:4px; font-weight:600; text-decoration:none; border:1px solid var(--fg);}
+  .btn-primary{background:var(--accent); color:var(--accent-fg); border-color:var(--accent);}
+  .btn-secondary{background:transparent; color:var(--fg);}
+  .cta-row{display:flex; gap:var(--space-sm); flex-wrap:wrap;}
+
+  /* ---------- HEADER ---------- */
+  header.site{display:flex; align-items:center; justify-content:space-between; padding:var(--space-sm) var(--pad); border-bottom:1px solid var(--line);}
+  header.site nav{display:flex; gap:var(--space-md); flex-wrap:wrap;}
+  header.site nav a{text-decoration:none; font-size:.95rem;}
+
+  /* ---------- HERO (home only) ---------- */
+  .hero{position:relative; min-height:80vh; display:flex; align-items:flex-end; background:#333 center/cover no-repeat; color:#fff;}
+  .hero::after{content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(0,0,0,.55), rgba(0,0,0,.1)); }
+  .hero .container{position:relative; z-index:1; padding-bottom:var(--space-xl);}
+  .hero .eyebrow{color:#eee;}
+  .hero h1{color:#fff;}
+  .hero p{color:#eee; max-width:640px;}
+
+  /* ---------- STATS BAR ---------- */
+  .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:var(--space-md); text-align:center;}
+  .stats .num{font-size:clamp(2rem,4vw,3rem); font-weight:700; display:block;}
+  .stats .label{color:var(--muted); font-size:.85rem;}
+
+  /* ---------- NUMBERED INTRO ---------- */
+  .numbered-intro{display:flex; gap:var(--space-md); align-items:flex-start;}
+  .numbered-intro .index{font-size:2.5rem; font-weight:700; color:var(--muted); flex-shrink:0;}
+
+  /* ---------- CARD GRID ---------- */
+  .card-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:var(--space-md);}
+  .card-grid.cols-3{grid-template-columns:repeat(3,1fr);}
+  .card{display:block; text-decoration:none; color:inherit;}
+  .card .img{aspect-ratio:4/3; background:#ddd; margin-bottom:var(--space-xs);}
+  .card h3{margin-bottom:4px;}
+  .card .tag{font-size:.75rem; text-transform:uppercase; color:var(--muted); letter-spacing:.08em;}
+
+  /* ---------- ALTERNATING SERVICE BLOCK ---------- */
+  .service-block{display:grid; grid-template-columns:1fr 1fr; gap:var(--space-lg); align-items:center; padding:var(--space-lg) 0; border-top:1px solid var(--line);}
+  .service-block .img{aspect-ratio:4/3; background:#ddd;}
+  .service-block .index{font-size:.8rem; color:var(--muted); letter-spacing:.08em; text-transform:uppercase;}
+  .service-block.flip .img{order:2;}
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{list-style:none; margin:0; padding:0; border-left:2px solid var(--line);}
+  .timeline li{padding:0 0 var(--space-lg) var(--space-md); position:relative;}
+  .timeline .tag{display:inline-block; font-size:.8rem; font-weight:700; color:var(--muted); margin-bottom:4px;}
+
+  .quote-block{display:grid; grid-template-columns:1fr 1.2fr; gap:var(--space-lg); align-items:center;}
+  .quote-block .img{aspect-ratio:1/1; background:#ddd;}
+  .quote-block blockquote{font-size:1.5rem; font-style:italic; margin:0 0 var(--space-sm);}
+
+  /* ---------- FILTER PILLS ---------- */
+  .pills{display:flex; gap:var(--space-xs); flex-wrap:wrap; margin-bottom:var(--space-md);}
+  .pill{padding:8px 16px; border:1px solid var(--line); border-radius:999px; font-size:.85rem; cursor:pointer;}
+  .pill.active{background:var(--fg); color:var(--bg); border-color:var(--fg);}
+
+  /* ---------- DENSE MEDIA GRID ---------- */
+  .media-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:8px;}
+  .media-grid .img{aspect-ratio:1/1; background:#ddd;}
+
+  /* ---------- FORM ---------- */
+  form.pattern{max-width:640px;}
+  form.pattern .honeypot{position:absolute; left:-9999px; opacity:0;}
+  form.pattern label{display:block; font-size:.85rem; margin-bottom:4px; font-weight:600;}
+  form.pattern .field{margin-bottom:var(--space-sm);}
+  form.pattern input, form.pattern select, form.pattern textarea{width:100%; padding:12px; border:1px solid var(--line); border-radius:4px; font-family:inherit;}
+  form.pattern .consent{display:flex; gap:8px; align-items:flex-start; font-size:.85rem; color:var(--muted);}
+
+  /* ---------- PRICING CARDS ---------- */
+  .pricing-cards{display:grid; grid-template-columns:repeat(2,1fr); gap:var(--space-md);}
+  .pricing-card{border:1px solid var(--line); border-radius:8px; padding:var(--space-md);}
+  .pricing-card .price{font-size:2rem; font-weight:700; margin-top:var(--space-sm);}
+
+  /* ---------- CTA BAND ---------- */
+  .cta-band{text-align:center; padding:var(--space-xl) 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .cta-band h2{margin-bottom:4px;}
+
+  /* ---------- CONTACT LAYOUT ---------- */
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:var(--space-lg);}
+  .contact-list{list-style:none; margin:0 0 var(--space-md); padding:0;}
+  .contact-list li{padding:var(--space-xs) 0; border-bottom:1px solid var(--line);}
+  .contact-list .label{font-size:.8rem; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; display:block;}
+  .map-placeholder{background:#ddd; min-height:320px; display:flex; align-items:center; justify-content:center; color:var(--muted);}
+
+  /* ---------- NUMBERED FEATURE LIST (reused for feature + spec lists) ---------- */
+  .feature-list{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-md);}
+  .feature-list .index{font-size:1.5rem; font-weight:700; color:var(--muted); margin-bottom:4px;}
+
+  /* ---------- PRODUCT GALLERY ---------- */
+  .gallery-hero .img{aspect-ratio:16/9; background:#ddd;}
+  .thumb-row{display:flex; gap:8px; margin-top:var(--space-xs);}
+  .thumb-row span{width:32px; height:32px; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; font-size:.75rem;}
+
+  /* ---------- GROUPED PRICING TABLE ---------- */
+  .price-group h3{margin-bottom:var(--space-xs);}
+  .price-rows{list-style:none; margin:0 0 var(--space-md); padding:0;}
+  .price-rows li{display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--line); text-decoration:none; color:inherit;}
+
+  /* ---------- FOOTER ---------- */
+  footer.site{border-top:1px solid var(--line); padding:var(--space-lg) 0 var(--space-md);}
+  .footer-grid{display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:var(--space-lg); margin-bottom:var(--space-lg);}
+  .footer-grid h4{font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:var(--space-sm);}
+  .footer-grid ul{list-style:none; margin:0; padding:0;}
+  .footer-grid li{margin-bottom:8px;}
+  .footer-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:var(--space-md); border-top:1px solid var(--line); font-size:.8rem; color:var(--muted); flex-wrap:wrap; gap:8px;}
+
+  @media (max-width: 800px){
+    .stats, .card-grid, .card-grid.cols-3, .media-grid, .feature-list, .pricing-cards, .footer-grid{grid-template-columns:repeat(2,1fr);}
+    .service-block, .quote-block, .contact-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER (site-wide) ============ -->
+<header class="site">
+  <a href="#" style="font-weight:700; letter-spacing:.05em;">[LOGO]</a>
+  <nav>
+    <a href="#">[About]</a>
+    <a href="#">[Services]</a>
+    <a href="#">[Flagship product]</a>
+    <a href="#">[Portfolio]</a>
+    <a href="#">[Testimonials]</a>
+    <a href="#">[Pricing]</a>
+    <a href="#">[Gallery]</a>
+    <a href="#">[Contact]</a>
+  </nav>
+  <a href="#" class="btn btn-primary">[Primary CTA]</a>
+</header>
+
+<!-- ============ HOME: HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">[Tag] · [Tag] · [Tag]</span>
+    <h1>[Two line hero statement<br>goes here]</h1>
+    <p>[One to two sentence supporting statement about the value proposition.]</p>
+    <div class="cta-row">
+      <a href="#" class="btn" style="background:#fff;color:#111;">[Primary CTA]</a>
+      <a href="#" class="btn" style="border-color:#fff;color:#fff;">[Secondary CTA]</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOME: STATS BAR ============ -->
+<section class="section container">
+  <div class="stats">
+    <div><span class="num">[0]</span><span class="label">[stat label]</span></div>
+    <div><span class="num">[0+]</span><span class="label">[stat label]</span></div>
+    <div><span class="num">[0%]</span><span class="label">[stat label]</span></div>
+    <div><span class="num">[0]</span><span class="label">[stat label]</span></div>
+  </div>
+</section>
+
+<!-- ============ HOME: NUMBERED INTRO ============ -->
+<section class="section container">
+  <div class="numbered-intro">
+    <span class="index">01</span>
+    <p style="font-size:1.15rem; color:var(--fg); margin:0;">[One paragraph mission/positioning statement.]</p>
+  </div>
+</section>
+
+<!-- ============ HOME: CARD GRID (sitemap-as-cards) ============ -->
+<section class="section container">
+  <h2>[What you'll find]</h2>
+  <p style="max-width:480px;">[Short subheading.]</p>
+  <div class="card-grid">
+    <a class="card" href="#"><div class="img"></div><h3>[Card title]</h3><p>[One-line description.]</p></a>
+    <a class="card" href="#"><div class="img"></div><h3>[Card title]</h3><p>[One-line description.]</p></a>
+    <a class="card" href="#"><div class="img"></div><h3>[Card title]</h3><p>[One-line description.]</p></a>
+    <a class="card" href="#"><div class="img"></div><h3>[Card title]</h3><p>[One-line description.]</p></a>
+  </div>
+</section>
+
+<!-- ============ INTERIOR PAGE HEADER (reuse on every interior page) ============ -->
+<section class="section container" style="padding-bottom:0;">
+  <span class="eyebrow">[Page eyebrow]</span>
+  <h1>[Page H1 statement]</h1>
+  <p style="max-width:600px;">[Optional supporting paragraph.]</p>
+</section>
+
+<!-- ============ SERVICES: ALTERNATING BLOCKS ============ -->
+<section class="container">
+  <div class="service-block">
+    <div class="img"></div>
+    <div>
+      <span class="index">01/03 · Service</span>
+      <h2>[Service name]</h2>
+      <p>[What it covers, how the process works.]</p>
+      <a href="#" class="btn btn-secondary">[Learn more]</a>
+    </div>
+  </div>
+  <div class="service-block flip">
+    <div class="img"></div>
+    <div>
+      <span class="index">02/03 · Service</span>
+      <h2>[Service name]</h2>
+      <p>[What it covers, how the process works.]</p>
+      <a href="#" class="btn btn-secondary">[Learn more]</a>
+    </div>
+  </div>
+  <div class="service-block">
+    <div class="img"></div>
+    <div>
+      <span class="index">03/03 · Service</span>
+      <h2>[Flagship product line]</h2>
+      <p>[What it covers.]</p>
+      <ul>
+        <li><a href="#">[Sub-product link 1]</a></li>
+        <li><a href="#">[Sub-product link 2]</a></li>
+        <li><a href="#">[Sub-product link 3 — coming soon]</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING CTA BAND (reuse on services/pricing/product pages) ============ -->
+<section class="cta-band container">
+  <h2>[Not sure where your job fits?]</h2>
+  <p>[Short supporting line.]</p>
+  <a href="#" class="btn btn-primary">[CTA]</a>
+</section>
+
+<!-- ============ ABOUT: TIMELINE ============ -->
+<section class="section container">
+  <ol class="timeline">
+    <li><span class="tag">[14 years]</span><h3>[Milestone title]</h3><p>[Milestone description.]</p></li>
+    <li><span class="tag">[4 years]</span><h3>[Milestone title]</h3><p>[Milestone description.]</p></li>
+    <li><span class="tag">[Today]</span><h3>[Milestone title]</h3><p>[Milestone description.]</p></li>
+  </ol>
+</section>
+
+<!-- ============ ABOUT: PORTRAIT + QUOTE ============ -->
+<section class="section container">
+  <div class="quote-block">
+    <div class="img"></div>
+    <div>
+      <blockquote>"[Pull quote from the founder/owner.]"</blockquote>
+      <p>— [Name, role]</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO: CARD GRID ============ -->
+<section class="section container">
+  <div class="card-grid cols-3">
+    <a class="card" href="#"><div class="img"></div><h3>[Project title]</h3><span class="tag">[Category]</span></a>
+    <a class="card" href="#"><div class="img"></div><h3>[Project title]</h3><span class="tag">[Category]</span></a>
+    <a class="card" href="#"><div class="img"></div><h3>[Project title]</h3><span class="tag">[Category]</span></a>
+  </div>
+</section>
+
+<!-- ============ GALLERY: FILTER + DENSE GRID ============ -->
+<section class="section container">
+  <div class="pills">
+    <span class="pill active">[All]</span>
+    <span class="pill">[Category 1]</span>
+    <span class="pill">[Category 2]</span>
+    <span class="pill">[Category 3]</span>
+  </div>
+  <div class="media-grid">
+    <div class="img"></div><div class="img"></div><div class="img"></div><div class="img"></div>
+    <div class="img"></div><div class="img"></div><div class="img"></div><div class="img"></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS: SUBMISSION FORM ============ -->
+<section class="section container">
+  <h2>[Did we work with you?]</h2>
+  <p>[Short instruction line.]</p>
+  <form class="pattern">
+    <input class="honeypot" type="text" tabindex="-1" autocomplete="off">
+    <div class="field"><label>[Name] *</label><input type="text"></div>
+    <div class="field"><label>[Company (optional)]</label><input type="text"></div>
+    <div class="field"><label>[Your experience] *</label><textarea rows="4"></textarea></div>
+    <div class="field"><label>[Photo (optional)]</label><input type="file"></div>
+    <div class="field consent"><input type="checkbox"><span>[I agree my name/text/photo may be published.] *</span></div>
+    <button class="btn btn-primary" type="submit">[Submit]</button>
+  </form>
+</section>
+
+<!-- ============ PRICING: CARDS ============ -->
+<section class="section container">
+  <div class="pricing-cards">
+    <div class="pricing-card">
+      <h3>[Flat-rate tier]</h3>
+      <p>[Description.]</p>
+      <div class="price">[550] <small style="font-size:1rem; font-weight:400;">/ [unit]</small></div>
+    </div>
+    <div class="pricing-card">
+      <h3>[Custom/large-scope tier]</h3>
+      <p>[Description.]</p>
+      <div class="price">[Quoted individually]</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT: INFO + MAP + FORM ============ -->
+<section class="section container">
+  <div class="contact-grid">
+    <div>
+      <ul class="contact-list">
+        <li><span class="label">[Phone]</span>[value]</li>
+        <li><span class="label">[Email]</span>[value]</li>
+        <li><span class="label">[Address]</span>[value]</li>
+        <li><span class="label">[Hours]</span>[value]</li>
+      </ul>
+      <a href="#" class="btn btn-primary">[Call now]</a>
+    </div>
+    <div class="map-placeholder">[Map embed]</div>
+  </div>
+</section>
+<section class="section container">
+  <h2>[Send an inquiry]</h2>
+  <form class="pattern">
+    <input class="honeypot" type="text" tabindex="-1" autocomplete="off">
+    <div class="field"><label>[Name] *</label><input type="text"></div>
+    <div class="field"><label>[Email] *</label><input type="email"></div>
+    <div class="field"><label>[Phone]</label><input type="tel"></div>
+    <div class="field"><label>[Inquiry type] *</label>
+      <select><option>[Type 1]</option><option>[Type 2]</option><option>[Other]</option></select>
+    </div>
+    <div class="field"><label>[Message] *</label><textarea rows="5"></textarea></div>
+    <div class="field consent"><input type="checkbox"><span>[I agree to processing of my personal data.] *</span></div>
+    <button class="btn btn-primary" type="submit">[Send inquiry]</button>
+  </form>
+</section>
+
+<!-- ============ PRODUCT DETAIL ============ -->
+<section class="section container gallery-hero">
+  <span class="eyebrow">[Own product]</span>
+  <h1>[Product name / headline claim]</h1>
+  <p style="max-width:560px;">[Subhead sentence.]</p>
+  <a href="#cenik" class="btn btn-secondary">[Jump to pricing]</a>
+  <div class="img" style="margin-top:var(--space-md);"></div>
+  <div class="thumb-row">
+    <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span>
+  </div>
+</section>
+
+<section class="section container">
+  <h2>[What it is]</h2>
+  <div class="img" style="aspect-ratio:16/9; margin-bottom:var(--space-sm);"></div>
+  <p>[Descriptive paragraph.]</p>
+  <p>[Second descriptive paragraph.]</p>
+</section>
+
+<section class="section container">
+  <div class="feature-list">
+    <div><span class="index">01</span><h3>[Feature title]</h3><p>[Short paragraph.]</p></div>
+    <div><span class="index">02</span><h3>[Feature title]</h3><p>[Short paragraph.]</p></div>
+    <div><span class="index">03</span><h3>[Feature title]</h3><p>[Short paragraph.]</p></div>
+  </div>
+</section>
+
+<section class="section container">
+  <span class="eyebrow">[Why it's different]</span>
+  <h2>[Section heading]</h2>
+  <p style="max-width:600px;">[Intro paragraph.]</p>
+  <div class="feature-list">
+    <div><span class="index">[Material]</span><h3>[Spec title]</h3><p>[Short paragraph.]</p></div>
+    <div><span class="index">[Finish]</span><h3>[Spec title]</h3><p>[Short paragraph.]</p></div>
+    <div><span class="index">[Welds]</span><h3>[Spec title]</h3><p>[Short paragraph.]</p></div>
+  </div>
+</section>
+
+<section class="section container" id="cenik">
+  <span class="eyebrow">[Pricing]</span>
+  <h2>[Prices by size]</h2>
+  <p style="max-width:600px;">[Legal/scope note about the prices below.]</p>
+  <div class="price-group">
+    <h3>[Series A]</h3>
+    <ul class="price-rows">
+      <li><a href="#"><span>[Size 1]</span><span>[Price]</span></a></li>
+      <li><a href="#"><span>[Size 2]</span><span>[Price]</span></a></li>
+    </ul>
+  </div>
+  <div class="price-group">
+    <h3>[Series B]</h3>
+    <ul class="price-rows">
+      <li><a href="#"><span>[Size 1]</span><span>[Price]</span></a></li>
+      <li><a href="#"><span>[Size 2]</span><span>[Price]</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta-band container">
+  <a href="#" class="btn btn-primary">[I'm interested]</a>
+  <a href="#" style="margin-left:var(--space-sm);">[Phone number]</a>
+</section>
+
+<!-- ============ FOOTER (site-wide) ============ -->
+<footer class="site container">
+  <div class="footer-grid">
+    <div>
+      <h4>[LOGO]</h4>
+      <p>[One-line brand/mission sentence.]</p>
+    </div>
+    <div>
+      <h4>[Sitemap]</h4>
+      <ul>
+        <li><a href="#">[About]</a></li>
+        <li><a href="#">[Services]</a></li>
+        <li><a href="#">[Flagship product]</a></li>
+        <li><a href="#">[Portfolio]</a></li>
+        <li><a href="#">[Testimonials]</a></li>
+        <li><a href="#">[Pricing]</a></li>
+        <li><a href="#">[Gallery]</a></li>
+        <li><a href="#">[Contact]</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>[Contact]</h4>
+      <ul>
+        <li>[Phone]</li>
+        <li>[Email]</li>
+        <li>[Address]</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>[Social icon]</span>
+    <span>© [Year] [Brand]. [Legal ID] · Built by [Credit]</span>
+  </div>
+</footer>
+
+</body>
+</html>

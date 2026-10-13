@@ -1,0 +1,96 @@
+/*
+ * Design tokeny: styl „Světlo výhně“ (web-project-brief.md §2).
+ *
+ * Barvy jsou přesně z briefu. Odvozené tokeny (--copper-ink, --paper-dim,
+ * --paper-shade, --rule) nejsou nové barvy, jen posun nebo směs tokenů
+ * kvůli kontrastu WCAG AA. Rozhodnutí a změřené poměry: memory/memory.md.
+ * Poměr ploch zhruba 85 % papír a uhel, zbytek akcenty. Žár nikdy jako velká plocha.
+ */
+
+:root {
+  /* Základ */
+  --paper: #f4efe6;
+  --coal: #221f1c;
+  --iron: #5b5853; /* 6,18:1 na papíře. Na uhlu nepoužívat (2,32:1). */
+  --copper: #b5532b; /* 4,33:1 na papíře: jen velký text, plochy, linky */
+  --ember: #e08a52; /* 6,19:1 na uhlu */
+
+  /* Škála žáru oceli, od tmavě třešňové po žlutobílou */
+  --heat-1: #7a1e12;
+  --heat-2: #a8321c;
+  --heat-3: #d9622b;
+  --heat-4: #ee8e3c;
+  --heat-5: #f6c35a;
+  --heat-6: #fbebc0;
+
+  /* Odvozené kvůli kontrastu */
+  --copper-ink: #af502a; /* měď ztmavená o 2 % světlosti: 4,58:1 na papíře, malý text a odkazy */
+  --paper-dim: color-mix(in srgb, var(--paper) 68%, var(--coal)); /* doplňkový text na uhlu, ~7:1 */
+  --paper-shade: color-mix(in srgb, var(--paper) 92%, var(--coal)); /* výplň PhotoSlot */
+  --rule: color-mix(in srgb, var(--coal) 18%, var(--paper)); /* tenké linky na papíře */
+  --rule-dark: color-mix(in srgb, var(--paper) 14%, var(--coal)); /* tenké linky na uhlu */
+
+  /* Záře: jen z tokenů žáru */
+  --glow-soft: 0 0 0 1px color-mix(in srgb, var(--heat-5) 55%, transparent),
+    0 0 18px 2px color-mix(in srgb, var(--heat-3) 45%, transparent);
+  --glow-text: 0 0 12px color-mix(in srgb, var(--heat-4) 70%, transparent);
+
+  /* Písma (proměnné plní next/font v src/app/layout.tsx) */
+  --font-display: var(--font-fraunces), 'Iowan Old Style', Georgia, serif;
+  --font-text: var(--font-source-sans), 'Segoe UI', system-ui, sans-serif;
+  --font-mark: var(--font-cinzel), 'Trajan Pro', Georgia, serif;
+
+  /*
+   * Typografická škála. Velikostní kontrast je záměrně velký:
+   * display nadpis je skoro šestinásobek textu, mezistupně jsou řídké.
+   */
+  --text-xs: 0.8125rem; /* 13 px, popisky fotek */
+  --text-sm: 0.9375rem; /* 15 px */
+  --text-base: 1.125rem; /* 18 px, základ podle briefu */
+  --text-lead: clamp(1.25rem, 1.12rem + 0.5vw, 1.5rem);
+  --text-h3: clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem);
+  --text-h2: clamp(2rem, 1.35rem + 2.6vw, 3.5rem);
+  --text-h1: clamp(2.75rem, 1.5rem + 5vw, 6.25rem);
+
+  --leading-text: 1.6;
+  --leading-tight: 1.08;
+  --leading-display: 0.94;
+
+  /*
+   * Rozestupy. Sekce nemají jednotné odsazení: každá si bere
+   * jeden ze tří rytmů podle hustoty obsahu (husté, běžné, vzdušné).
+   */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+  --section-tight: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
+  --section-base: clamp(4rem, 2.4rem + 6vw, 7.5rem);
+  --section-airy: clamp(5.5rem, 3rem + 9vw, 11rem);
+
+  /* Šířky */
+  --gutter: clamp(1.25rem, 0.6rem + 3vw, 3.5rem);
+  --wrap: 84rem; /* hlavní mřížka */
+  --wrap-narrow: 62rem;
+  --measure: 36em; /* délka řádku textu */
+
+  /* Pohyb */
+  --ease-forge: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-heat: 420ms;
+  --dur-quick: 160ms;
+
+  /* Výška mobilní lišty Zavolat | Napsat (počítá se s ní v paddingu body) */
+  --callbar-h: 3.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-heat: 0ms;
+    --dur-quick: 0ms;
+  }
+}

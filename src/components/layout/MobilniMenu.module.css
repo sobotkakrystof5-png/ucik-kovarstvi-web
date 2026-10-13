@@ -1,0 +1,167 @@
+.opener {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: auto;
+  min-height: 2.75rem; /* cíl pro palec min. 44 px */
+  padding: 0 0.25rem;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--coal);
+  font-weight: 600;
+  font-size: 1.0625rem;
+}
+
+/* Tři nestejně dlouhé čáry, jako tyče různé délky na stojanu */
+.burger {
+  position: relative;
+  width: 1.375rem;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.burger::before {
+  top: -6px;
+  width: 1rem;
+}
+
+.burger::after {
+  top: 6px;
+  width: 1.2rem;
+}
+
+@media (min-width: 64rem) {
+  .opener {
+    display: none;
+  }
+}
+
+/* ---------- Panel ----------
+ * Selektory s .dialog mají vyšší specifičnost než globální `.surface-coal a`. */
+
+.dialog {
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: var(--space-4) var(--gutter) calc(var(--space-6) + env(safe-area-inset-bottom, 0px));
+  border: 0;
+  overflow-y: auto;
+  display: none;
+  flex-direction: column;
+}
+
+.dialog[open] {
+  display: flex;
+}
+
+.dialog::backdrop {
+  background: var(--coal);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dialog[open] {
+    animation: rozevrit 260ms var(--ease-forge);
+  }
+}
+
+@keyframes rozevrit {
+  from {
+    opacity: 0;
+  }
+}
+
+:global(html:has(dialog[open])) {
+  overflow: hidden;
+}
+
+.top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close {
+  min-height: 2.75rem;
+  padding: 0 0.25rem;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--paper);
+  font-weight: 600;
+  font-size: 1.0625rem;
+}
+
+.nav {
+  margin-top: var(--space-5);
+}
+
+.dialog .big {
+  display: block;
+  padding: 0.35rem 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.4rem + 3vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.groups {
+  list-style: none;
+  padding: 0 0 var(--space-5) var(--space-4);
+  margin: var(--space-2) 0 var(--space-4);
+  border-left: 1px solid var(--rule-dark);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: 0 var(--space-4);
+}
+
+.dialog .group {
+  display: block;
+  padding: 0.55rem 0; /* 44 px cíl i u menších položek */
+  font-size: 1.0625rem;
+  line-height: 1.3;
+  color: var(--paper-dim);
+  text-decoration: none;
+}
+
+.main {
+  list-style: none;
+  padding: 0;
+}
+
+.dialog .big[aria-current='page'],
+.dialog .group[aria-current='page'] {
+  color: var(--ember);
+}
+
+.contact {
+  margin-top: auto;
+  padding-top: var(--space-7);
+  display: grid;
+  gap: var(--space-2);
+}
+
+.dialog .phone {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-variant-numeric: lining-nums tabular-nums;
+  text-decoration: none;
+}
+
+.mail {
+  font-size: 1.0625rem;
+}

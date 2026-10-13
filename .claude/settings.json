@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "D=\"${CLAUDE_PROJECT_DIR:-}\"; [ -n \"$D\" ] && cd \"$D\" 2>/dev/null || exit 0; [ -d memory ] || exit 0; INPUT=$(cat); if command -v jq >/dev/null 2>&1; then TOOL=$(printf '%s' \"$INPUT\" | jq -r '.tool_name // \"unknown\"' 2>/dev/null); FILE=$(printf '%s' \"$INPUT\" | jq -r '.tool_input.file_path // .tool_input.notebook_path // \"unknown\"' 2>/dev/null); else TOOL=unknown; FILE=unknown; fi; REL=\"${FILE#\"$D\"/}\"; printf '[%s] %s %s\\n' \"$(date '+%Y-%m-%dT%H:%M:%S%z')\" \"$TOOL\" \"$REL\" >> memory/activity.log 2>/dev/null; exit 0",
+            "statusMessage": "Zapisuji do memory/activity.log..."
+          }
+        ]
+      }
+    ]
+  }
+}

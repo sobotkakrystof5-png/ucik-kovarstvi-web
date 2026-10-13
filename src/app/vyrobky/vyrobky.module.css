@@ -1,0 +1,112 @@
+/*
+ * Přehled skupin: dlaždice podle významu (brief §4), brány a ploty největší.
+ * Desktop: asymetrická mřížka 12 sloupců, třetí řada je posunutá a rozbitá,
+ * aby to nebyla řada stejných karet.
+ */
+.tiles {
+  display: grid;
+  gap: var(--space-8) var(--space-6);
+  list-style: none;
+}
+
+.tile {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+}
+
+.photoLink {
+  display: block;
+}
+
+.name {
+  font-size: var(--text-h3);
+}
+
+.velka .name {
+  font-size: var(--text-h2);
+}
+
+.name a {
+  color: var(--coal);
+  text-decoration: none;
+}
+
+.name a:hover {
+  color: var(--heat-2);
+}
+
+/* Najetí na fotku rozžhaví i název (fotka sama je mimo tab order) */
+.tile:has(.photoLink:hover) .name a {
+  color: var(--heat-2);
+  text-shadow: var(--glow-text);
+}
+
+.short {
+  margin-top: var(--space-2);
+  color: var(--iron);
+}
+
+.cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-4);
+  margin-top: var(--space-3);
+  list-style: none;
+  padding: 0;
+  font-size: var(--text-sm);
+}
+
+.cats a {
+  display: inline-block;
+  padding: 0.2rem 0;
+}
+
+@media (min-width: 48rem) {
+  .tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .velka {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 64rem) {
+  .tiles {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: var(--space-8) var(--space-6);
+  }
+
+  .tile:nth-child(1) {
+    grid-column: 1 / span 7;
+    grid-row: 1 / span 2;
+  }
+
+  .tile:nth-child(2) {
+    grid-column: 8 / span 5;
+    grid-row: 1;
+  }
+
+  .tile:nth-child(3) {
+    grid-column: 8 / span 5;
+    grid-row: 2;
+  }
+
+  .tile:nth-child(4) {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    margin-top: var(--space-8);
+  }
+
+  .tile:nth-child(5) {
+    grid-column: 5 / span 5;
+    grid-row: 3;
+  }
+
+  .tile:nth-child(6) {
+    grid-column: 10 / span 3;
+    grid-row: 3;
+    margin-top: var(--space-9);
+  }
+}
