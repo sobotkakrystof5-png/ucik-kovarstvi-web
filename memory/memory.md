@@ -75,6 +75,12 @@ Aby to budoucí session „neopravila“ jako chybu.
 
 Nejnovější nahoře.
 
+### 2026-10-22 — Texty webu: plynulejší věty místo úsečných útržků
+- **Co:** Viditelné texty přepsány do prostšího, souvislého stylu (celé věty se spojkami místo útržků typu „Na stůl i na zeď.“). Dotčeno: Úvod (dlaždice, Jak pracuji, Kovář, Kde pracuji), krátké i delší popisy všech skupin a kategorií, pět kroků postupu, O mně (Dílna), úvody Kontaktu a Výrobků, text u Vzorů, úvody částí Realizací („Najdete tu …“). Obsah a fakta beze změny, nic nepřibylo.
+- **Proč:** na pokyn uživatele, vzor stylu dodal uživatel (cizí text z jiné dílny, převzat byl jen styl, ne fakta ani věty).
+- **Dopad:** SEO `title` a `description` záměrně nedotčeny, jsou pracovní a přepíšou se po fázi 0. Hero nadpis „Vykovám Vám bránu, která vydrží generace.“ zůstal (tón schválený klientem v briefu). Typecheck a lint prošly. Texty zatím neprošly `humanize-text-cs`.
+- **Soubory:** `src/content/{uvod,vyrobky,postup,omne,realizace}.ts`, `src/app/{page,kontakt/page,vyrobky/page}.tsx`, `src/components/vyrobky/Vzory.tsx`
+
 ### 2026-10-13 — Úvod, „Kde pracuji“: mapa ČR po krajích + rozbalovací seznam
 - **Co:** Mapka regionu s řekami nahrazena SVG mapou ČR po krajích podle vzoru od uživatele. Zvýrazněné (uhel) jsou kraje, kam patří města z oblasti: Ústecký, Liberecký, Středočeský + Praha. Tečky měst, dílna s popiskem a vodicí čárou. Vlevo rozbalovací seznam (`<details>`, bez JS) se třemi skupinami a městy. Rozbalený, zaměřený nebo najetý kraj se na mapě rozsvítí mědí (CSS `:has`). Města v `oblast.ts` mají pole `kraj`, přibyly `skupinyKraju` a `mestaSkupiny`. Hranice krajů z Natural Earth 1:10m Admin 1 (public domain), předpočítané do `kraje-cr.ts` (~23 kB, server component, žádný požadavek za běhu, CSP beze změny).
 - **Proč:** na pokyn uživatele (design podle dodaného obrázku).

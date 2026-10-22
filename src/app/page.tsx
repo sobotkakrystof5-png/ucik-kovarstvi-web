@@ -101,8 +101,8 @@ export default function UvodPage() {
           })}
         </ul>
         <p className={styles.coRest}>
-          Ke krbu vykovám <Link href="/vyrobky/krby">dýmník, rošt i nářadí</Link>. A dělám{' '}
-          <Link href="/vyrobky/zakazky-na-prani">zakázky na přání</Link>, třeba vývěsní štíty, kostelní
+          Ke krbu vykovám <Link href="/vyrobky/krby">dýmník, rošt i nářadí</Link>. Dělám také{' '}
+          <Link href="/vyrobky/zakazky-na-prani">zakázky na přání</Link>, například vývěsní štíty, kostelní
           kříže, meče nebo zvoneček na dům.{' '}
           <Link href="/vyrobky" className={styles.coAll}>
             Všechny výrobky

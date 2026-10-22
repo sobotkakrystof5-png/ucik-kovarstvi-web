@@ -17,7 +17,7 @@ export function Vzory({ vzory }: { vzory: Vzor[] }) {
       <div className={styles.head}>
         <h2 id="vzory-nadpis">Vzory</h2>
         <p className="muted">
-          Každý vzor jde upravit na Váš rozměr. Když Vám žádný nesedí, nakreslím nový.
+          Každý vzor se dá upravit na Váš rozměr, a když Vám žádný nesedí, nakreslím nový.
         </p>
       </div>
       {druhy.map((d) => (

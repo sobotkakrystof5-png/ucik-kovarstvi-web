@@ -73,10 +73,10 @@ export const skupiny: Skupina[] = [
   {
     slug: 'brany-a-ploty',
     nazev: 'Brány a ploty',
-    kratce: 'Vrata, brány, branky a ploty. Vydrží roky a o údržbu si skoro neřeknou.',
+    kratce: 'Vrata, brány, branky i ploty, které dlouho vydrží a nevyžadují mnoho údržby.',
     text: [
-      'Kovanou bránu, branku nebo plot Vám vykovám podle Vašeho návrhu, nebo podle některého z mých vzorů. Kované železo má dlouhou životnost, dobře snáší počasí a údržbu chce jen malou.',
-      'Udělám vjezdová vrata i branku k nim, a když chcete, celý plot kolem pozemku v jednom stylu. Hotové je přivezu a namontuji.',
+      'Kovanou bránu, branku nebo plot Vám vykovám podle Vašeho návrhu nebo podle některého z mých vzorů. Kované železo dlouho vydrží, dobře snáší počasí a nevyžaduje mnoho údržby.',
+      'Mohu udělat vjezdová vrata i branku k nim, a pokud chcete, tak i celý plot kolem pozemku ve stejném stylu. Hotové dílo Vám přivezu a namontuji.',
     ],
     hero: hero('brany-hero-01', 'kovaná brána u domu za denního světla, celkový pohled', 'Kovaná brána a plot u rodinného domu'),
     seo: {
@@ -91,9 +91,9 @@ export const skupiny: Skupina[] = [
   {
     slug: 'mrize-dvere-kovani',
     nazev: 'Mříže, dveře a kování',
-    kratce: 'Okenní a vstupní mříže, kované dveře, kliky, klepadla a panty.',
+    kratce: 'Okenní a vstupní mříže, kované dveře a také kování, jako jsou kliky, klepadla a panty.',
     text: [
-      'Mříže kovám pro novostavby i pro historické domy. K nim dveře, dvířka a okenní prvky, a nakonec kování, které budete mít každý den v ruce.',
+      'Mříže kovám pro novostavby i pro historické domy. Mohu k nim vyrobit také dveře, dvířka a okenní prvky a nakonec i kování, které budete mít každý den v ruce.',
     ],
     hero: hero('mrize-hero-01', 'okenní mříž na fasádě, detail kovaných prutů', 'Kovaná okenní mříž na fasádě domu'),
     seo: {
@@ -106,10 +106,10 @@ export const skupiny: Skupina[] = [
       {
         slug: 'mrize',
         nazev: 'Mříže',
-        kratce: 'Okenní i vstupní, do novostavby i na starý dům.',
+        kratce: 'Okenní i vstupní mříže pro novostavby i pro staré domy.',
         text: [
-          'Okenní a vstupní mříže dělám pro novostavby i pro historické domy. Na starší fasádě může mříž navázat na její styl, na novém domě bývá jednodušší.',
-          'Tvar navrhnu sám, nebo vyjdu z Vašeho nákresu. Mříž přivezu a namontuji.',
+          'Okenní a vstupní mříže dělám pro novostavby i pro historické domy. Na starší fasádě může mříž navázat na styl domu, zatímco na novém domě bývá jednodušší.',
+          'Tvar mříže navrhnu sám, nebo vyjdu z Vašeho nákresu. Hotovou mříž pak přivezu a namontuji.',
         ],
         hero: hero('mrize-mrize-hero-01', 'kovaná okenní mříž na historickém domě', 'Kovaná okenní mříž na historickém domě'),
         seo: {
@@ -121,9 +121,9 @@ export const skupiny: Skupina[] = [
       {
         slug: 'dvere-dvirka-okna',
         nazev: 'Dveře, dvířka, okna',
-        kratce: 'Kované dveře a dvířka na míru otvoru, který máte.',
+        kratce: 'Kované dveře a dvířka vyrobené na míru Vašemu otvoru.',
         text: [
-          'Kované dveře, dvířka a okenní prvky vyrobím na míru otvoru, který máte. Podle Vašeho návrhu, nebo podle mého, a se stejným kováním, jaké je na zbytku domu.',
+          'Kované dveře, dvířka a okenní prvky vyrobím na míru otvoru, který máte. Mohu vyjít z Vašeho návrhu nebo z mého a použít stejné kování, jaké je na zbytku domu.',
         ],
         hero: hero('mrize-dvere-hero-01', 'kované vstupní dveře, celkový pohled', 'Kované vstupní dveře'),
         seo: {
@@ -135,7 +135,7 @@ export const skupiny: Skupina[] = [
       {
         slug: 'kliky-madla-klepadla-panty',
         nazev: 'Kliky, madla, klepadla, panty',
-        kratce: 'Kování jako samostatný kus i jako sada ke dveřím.',
+        kratce: 'Kování jako jednotlivý kus nebo jako celá sada ke dveřím.',
         text: [
           'Kliku, madlo, klepadlo nebo pant vykovám jako jeden kus, nebo jako celou sadu ke dveřím či bráně. Kování držíte v ruce každý den, takže na jeho tvaru záleží víc, než se zdá.',
         ],
@@ -151,10 +151,10 @@ export const skupiny: Skupina[] = [
   {
     slug: 'zabradli-a-balkony',
     nazev: 'Zábradlí a balkony',
-    kratce: 'Schodišťová zábradlí, balkony a balkónky.',
+    kratce: 'Zábradlí na schody a také balkony a balkónky.',
     text: [
-      'Zábradlí dělám na míru konkrétnímu schodišti, balkonu nebo balkónku, uvnitř domu i venku. Navrhnu ho sám, nebo podle Vašeho nákresu.',
-      'Hotové zábradlí přivezu a namontuji na místě.',
+      'Zábradlí dělám na míru konkrétnímu schodišti, balkonu nebo balkónku, a to uvnitř domu i venku. Navrhnu ho sám, nebo podle Vašeho nákresu.',
+      'Hotové zábradlí Vám přivezu a na místě namontuji.',
     ],
     hero: hero('zabradli-hero-01', 'kované schodišťové zábradlí v interiéru', 'Kované schodišťové zábradlí v interiéru'),
     seo: {
@@ -168,9 +168,9 @@ export const skupiny: Skupina[] = [
   {
     slug: 'krby',
     nazev: 'Krby',
-    kratce: 'Dýmníky, rošty a krbové nářadí.',
+    kratce: 'Vyrábím dýmníky, rošty i krbové nářadí.',
     text: [
-      'Ke krbu vykovám dýmník, rošt i soupravu nářadí. Když je všechno z jedné dílny, k sobě to sedí.',
+      'Ke krbu vykovám dýmník, rošt i soupravu nářadí. Když je všechno z jedné dílny, jednotlivé kusy k sobě dobře pasují.',
     ],
     hero: hero('krby-hero-01', 'krb s kovaným roštem a soupravou nářadí', 'Krb s kovaným roštem a krbovým nářadím'),
     seo: {
@@ -183,7 +183,7 @@ export const skupiny: Skupina[] = [
       {
         slug: 'dymniky-a-rosty',
         nazev: 'Dýmníky a rošty',
-        kratce: 'Na rozměr Vašeho krbu.',
+        kratce: 'Vyrobené na rozměr Vašeho krbu.',
         text: [
           'Dýmník i rošt vykovám na rozměr Vašeho krbu. Tvar domluvíme podle toho, jak krb vypadá a jak se v něm topí.',
         ],
@@ -197,7 +197,7 @@ export const skupiny: Skupina[] = [
       {
         slug: 'krbove-naradi',
         nazev: 'Krbové nářadí',
-        kratce: 'Krbové soupravy se stojanem.',
+        kratce: 'Krbové soupravy včetně stojanu.',
         text: [
           'Krbovou soupravu vykovám jako celek i se stojanem. Tvar a zdobení přizpůsobím krbu a místnosti, ve které bude stát.',
         ],
@@ -213,7 +213,7 @@ export const skupiny: Skupina[] = [
   {
     slug: 'nabytek-a-interier',
     nazev: 'Nábytek a interiér',
-    kratce: 'Postele, stoly, židle, police, svícny, zrcadla a další kusy do domu.',
+    kratce: 'Kovaný nábytek a doplňky do domu, třeba postele, stoly, židle, police, svícny nebo zrcadla.',
     text: [
       'Kovaný nábytek a doplňky do interiéru dělám na zakázku. Postel, stůl nebo police tak mají přesně ten rozměr a tvar, který potřebujete.',
     ],
@@ -228,9 +228,9 @@ export const skupiny: Skupina[] = [
       {
         slug: 'zidle-stoly-postele',
         nazev: 'Židle, stoly, postele',
-        kratce: 'Kovaný nábytek v rozměru Vaší místnosti.',
+        kratce: 'Kovaný nábytek, který se vejde do Vaší místnosti.',
         text: [
-          'Kovanou postel, stůl nebo židle udělám v rozměru, který se Vám vejde do místnosti. Návrh může být Váš, nebo ho nakreslím já.',
+          'Kovanou postel, stůl nebo židle udělám v takovém rozměru, aby se Vám vešly do místnosti. Návrh může být Váš, nebo ho nakreslím já.',
         ],
         hero: hero('nabytek-nabytek-hero-01', 'kovaná postel v ložnici', 'Kovaná postel v ložnici'),
         seo: {
@@ -242,7 +242,7 @@ export const skupiny: Skupina[] = [
       {
         slug: 'regaly-police-drzaky',
         nazev: 'Regály, police, držáky',
-        kratce: 'Na míru místu, kam mají přijít.',
+        kratce: 'Vyrobené na míru místu, kam mají přijít.',
         text: [
           'Kovaný regál, polici nebo držák udělám na míru místu, kam má přijít. Pošlete mi rozměr a fotku místa a domluvíme se.',
         ],
@@ -256,7 +256,7 @@ export const skupiny: Skupina[] = [
       {
         slug: 'svicny',
         nazev: 'Svícny',
-        kratce: 'Na stůl i na zeď.',
+        kratce: 'Svícny na stůl i na zeď.',
         text: [
           'Svícen na stůl nebo na zeď vykovám tak, aby ladil s ostatním kováním v domě. Hodí se i jako dárek.',
         ],
@@ -270,7 +270,7 @@ export const skupiny: Skupina[] = [
       {
         slug: 'zrcadla-a-ramy',
         nazev: 'Zrcadla a rámy',
-        kratce: 'Kovaný rám v rozměru i tvaru podle Vás.',
+        kratce: 'Kovaný rám v takovém rozměru a tvaru, jaký chcete.',
         text: [
           'Kovaný rám k zrcadlu nebo obrazu udělám v rozměru i tvaru podle Vás, jednoduchý nebo zdobený.',
         ],
@@ -286,7 +286,7 @@ export const skupiny: Skupina[] = [
         nazev: 'Lampičky, plastiky, stojany na víno',
         kratce: 'Menší kusy do interiéru.',
         text: [
-          'Sem patří menší kusy do interiéru: lampičky, kované plastiky a stojany na víno. Jednou z plastik je třeba strom, najdete ho v realizacích.',
+          'Sem patří menší kusy do interiéru, například lampičky, kované plastiky a stojany na víno. Jednou z plastik je třeba strom, který najdete v realizacích.',
         ],
         hero: hero('nabytek-plastiky-hero-01', 'kovaná plastika stromu', 'Kovaná plastika stromu'),
         seo: {
@@ -300,10 +300,10 @@ export const skupiny: Skupina[] = [
   {
     slug: 'zakazky-na-prani',
     nazev: 'Zakázky na přání',
-    kratce: 'Vývěsní štíty, kostelní kříže, meče a kusy, které se nevejdou jinam.',
+    kratce: 'Vývěsní štíty, kostelní kříže, meče i další kusy, které nepatří do ostatních skupin.',
     text: [
-      'Dělám i zakázky, které nepatří k branám ani k nábytku. Vývěsní štíty, kostelní kříže a jejich renovace, kované meče, zahradní stolky a židle. A také historické předměty, třeba číše, poháry, mísy nebo makety.',
-      'Když máte nápad a nevíte, jestli se dá vykovat, zavolejte mi. Domluvíme se.',
+      'Dělám i zakázky, které nepatří k branám ani k nábytku. Jsou to třeba vývěsní štíty, kostelní kříže a jejich renovace, kované meče nebo zahradní stolky a židle. Vyrobím také historické předměty, například číše, poháry, mísy nebo makety.',
+      'Když máte nápad a nevíte, jestli se dá vykovat, zavolejte mi a spolu to probereme.',
     ],
     hero: hero('zakazky-hero-01', 'kovaný vývěsní štít nad vchodem', 'Kovaný vývěsní štít'),
     seo: {
@@ -316,7 +316,7 @@ export const skupiny: Skupina[] = [
       {
         slug: 'vyvesni-stity-krize-mece',
         nazev: 'Vývěsní štíty, kříže, meče',
-        kratce: 'Štíty, kostelní kříže včetně renovací a kované meče.',
+        kratce: 'Vývěsní štíty, kostelní kříže včetně renovací a kované meče.',
         text: [
           'Vykovám vývěsní štít k Vaší provozovně, kostelní kříž nebo kovaný meč. Kostelní kříže a další kované kostelní prvky umím vyrobit nově i renovovat.',
         ],
@@ -330,9 +330,9 @@ export const skupiny: Skupina[] = [
       {
         slug: 'zahrada',
         nazev: 'Zahrada',
-        kratce: 'Zahradní stolky, židle a další kované prvky ven.',
+        kratce: 'Zahradní stolky, židle a další kované prvky do zahrady.',
         text: [
-          'Na zahradu vykovám stolky a židle, které vydrží venku. Domluvit se dá i na dalších kovaných prvcích.',
+          'Na zahradu vykovám stolky a židle, které vydrží venku, a dá se domluvit i na dalších kovaných prvcích.',
         ],
         hero: hero('zakazky-zahrada-hero-01', 'kovaný zahradní stolek se židlemi v zahradě', 'Kovaný zahradní stolek a židle'),
         seo: {
@@ -344,9 +344,9 @@ export const skupiny: Skupina[] = [
       {
         slug: 'ostatni',
         nazev: 'Ostatní',
-        kratce: 'Zvonečky, poštovní schránky, historické předměty.',
+        kratce: 'Zvonečky, poštovní schránky a historické předměty.',
         text: [
-          'Domovní zvoneček, poštovní schránka, historické číše, poháry, mísy nebo makety. Sem patří všechno, co se nevešlo jinam, třeba zvoneček Drak.',
+          'Sem patří všechno, co se nevešlo jinam, třeba domovní zvonečky, poštovní schránky, historické číše, poháry, mísy nebo makety. Jedním z nich je zvoneček Drak.',
         ],
         hero: hero('zakazky-ostatni-hero-01', 'kovaný domovní zvoneček Drak', 'Kovaný domovní zvoneček Drak'),
         seo: {
@@ -358,9 +358,9 @@ export const skupiny: Skupina[] = [
       {
         slug: 'nakresy-a-vzorky',
         nazev: 'Nákresy a vzorky',
-        kratce: 'Ruční nákresy a vzorky, ze kterých výrobky vznikají.',
+        kratce: 'Ruční nákresy a vzorky, podle kterých výrobky vznikají.',
         text: [
-          'Než začnu kovat, kreslím. Tady jsou moje ruční nákresy a vzorky, například klepadlo i s nákresem, podle kterého vzniklo.',
+          'Než začnu kovat, nejdřív kreslím. Tady najdete moje ruční nákresy a vzorky, například klepadlo spolu s nákresem, podle kterého vzniklo.',
         ],
         hero: hero('zakazky-nakresy-hero-01', 'ruční perokresba výrobku vedle hotového kusu', 'Ruční nákres kovaného výrobku'),
         seo: {

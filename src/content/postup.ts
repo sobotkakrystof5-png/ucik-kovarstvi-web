@@ -32,7 +32,7 @@ export const kroky: Krok[] = [
     kratce: 'Zavoláte mi nebo pošlete fotku místa a řeknete, co si představujete.',
     text: [
       'Všechno začíná tím, co potřebujete. Zavoláte mi, nebo pošlete fotku místa, kam má výrobek přijít, a řeknete, co si představujete.',
-      'Klidně jen přibližně. Zbytek spolu dořešíme.',
+      'Stačí to říct i přibližně, zbytek spolu dořešíme.',
     ],
     nakres: foto(1, 'nakres', 'první skica nápadu, pár čar tužkou', 'První ruční skica návrhu'),
     dilna: foto(1, 'dilna', 'fotka místa od zákazníka nebo rozhovor nad nákresem', 'Rozhovor nad návrhem v dílně'),
@@ -43,7 +43,7 @@ export const kroky: Krok[] = [
     kratce: 'Vyjdu z Vašeho návrhu, nebo Vám ho nakreslím sám.',
     text: [
       'Když máte vlastní návrh, vyjdu z něj. Když ne, nakreslím Vám ho já.',
-      'Ruční nákres ukáže, jak bude výrobek vypadat, ještě než rozpálím výheň. Úpravy se dělají na papíře, ne na hotovém železe.',
+      'Ruční nákres ukáže, jak bude výrobek vypadat, ještě než rozpálím výheň, takže případné úpravy se dělají na papíře a ne na hotovém železe.',
     ],
     nakres: foto(2, 'nakres', 'hotový ruční nákres výrobku s rozměry', 'Ruční nákres výrobku s rozměry'),
     dilna: foto(2, 'dilna', 'kreslení návrhu na ponku v dílně', 'Kreslení návrhu v dílně'),
@@ -51,7 +51,7 @@ export const kroky: Krok[] = [
   {
     cislo: 3,
     nazev: 'Kování',
-    kratce: 'Ve výhni a na kovadlině, jak se to dělalo vždycky.',
+    kratce: 'Kovám ve výhni a na kovadlině tak, jak se to dělalo vždycky.',
     text: [
       'Kovám tradičně, ve výhni a na kovadlině. Navazuji na klasickou kovařinu, a kde to práci pomůže, použiji i nové technologie a postupy.',
     ],
@@ -61,9 +61,9 @@ export const kroky: Krok[] = [
   {
     cislo: 4,
     nazev: 'Povrchová úprava',
-    kratce: 'Podle toho, jestli výrobek bude venku, nebo v domě.',
+    kratce: 'Úprava se liší podle toho, jestli bude výrobek venku, nebo v domě.',
     text: [
-      'Hotový kus dostane povrchovou úpravu podle místa, kam půjde. Venku musí odolat počasí, v interiéru rozhoduje spíš vzhled.',
+      'Hotový kus dostane povrchovou úpravu podle místa, kam půjde. Venku musí odolat počasí, kdežto v interiéru rozhoduje spíš vzhled.',
     ],
     doplni: 'jaké povrchové úpravy používá (nátěr, zinkování, vosk…)',
     nakres: foto(4, 'nakres', 'nákres s poznámkou o povrchové úpravě', 'Nákres s poznámkou o povrchové úpravě'),
@@ -72,9 +72,9 @@ export const kroky: Krok[] = [
   {
     cislo: 5,
     nazev: 'Doprava a montáž',
-    kratce: 'Výrobek přivezu a namontuji.',
+    kratce: 'Hotový výrobek Vám přivezu a namontuji.',
     text: [
-      'Výrobek Vám přivezu a namontuji. Nemusíte shánět dopravu ani nikoho dalšího na montáž.',
+      'Výrobek Vám přivezu a namontuji, takže nemusíte shánět dopravu ani nikoho dalšího na montáž.',
     ],
     nakres: foto(5, 'nakres', 'montážní nákres nebo osazení na místě', 'Montážní nákres'),
     dilna: foto(5, 'dilna', 'montáž hotové brány nebo zábradlí u zákazníka', 'Montáž kovaného výrobku u zákazníka'),

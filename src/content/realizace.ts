@@ -50,7 +50,7 @@ export const casti: CastInfo[] = [
   {
     slug: 'brany-a-ploty',
     nazev: 'Brány a ploty',
-    obsah: 'Vrata, brány, branky a ploty, včetně pojmenovaných vzorů.',
+    obsah: 'Najdete tu vrata, brány, branky a ploty, včetně pojmenovaných vzorů.',
     seo: {
       title: 'Realizace: kované brány a ploty',
       description:
@@ -60,7 +60,7 @@ export const casti: CastInfo[] = [
   {
     slug: 'mrize-dvere-kovani',
     nazev: 'Mříže, dveře a kování',
-    obsah: 'Okenní a vstupní mříže, dveře, kliky, klepadla a panty.',
+    obsah: 'Najdete tu okenní a vstupní mříže, dveře, kliky, klepadla a panty.',
     seo: {
       title: 'Realizace: kované mříže, dveře a kování',
       description:
@@ -70,7 +70,7 @@ export const casti: CastInfo[] = [
   {
     slug: 'zabradli-a-balkony',
     nazev: 'Zábradlí a balkony',
-    obsah: 'Schodišťová zábradlí, balkony a balkónky.',
+    obsah: 'Najdete tu schodišťová zábradlí, balkony a balkónky.',
     seo: {
       title: 'Realizace: kované zábradlí a balkony',
       description:
@@ -80,7 +80,7 @@ export const casti: CastInfo[] = [
   {
     slug: 'krby',
     nazev: 'Krby',
-    obsah: 'Dýmníky, rošty a krbové nářadí.',
+    obsah: 'Najdete tu dýmníky, rošty a krbové nářadí.',
     seo: {
       title: 'Realizace: dýmníky, rošty a krbové nářadí',
       description:
@@ -90,7 +90,7 @@ export const casti: CastInfo[] = [
   {
     slug: 'nabytek-a-interier',
     nazev: 'Nábytek a interiér',
-    obsah: 'Postele, stoly, židle, police, svícny, zrcadla, plastiky a stojany na víno.',
+    obsah: 'Najdete tu postele, stoly, židle, police, svícny, zrcadla, plastiky a stojany na víno.',
     seo: {
       title: 'Realizace: kovaný nábytek a interiér',
       description:
@@ -100,7 +100,7 @@ export const casti: CastInfo[] = [
   {
     slug: 'zakazky-na-prani',
     nazev: 'Zakázky na přání',
-    obsah: 'Vývěsní štíty, kostelní kříže a renovace, meče, zahradní prvky a zvonky.',
+    obsah: 'Najdete tu vývěsní štíty, kostelní kříže a renovace, meče, zahradní prvky a zvonky.',
     seo: {
       title: 'Realizace: kovářské zakázky na přání',
       description:
@@ -110,7 +110,7 @@ export const casti: CastInfo[] = [
   {
     slug: 'z-dilny',
     nazev: 'Z dílny',
-    obsah: 'Výheň, práce u kovadliny, rozpracované kusy a nákresy.',
+    obsah: 'Najdete tu výheň, práci u kovadliny, rozpracované kusy a nákresy.',
     seo: {
       title: 'Z kovářské dílny v Žitenicích',
       description:

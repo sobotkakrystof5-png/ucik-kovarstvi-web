@@ -24,7 +24,7 @@ export default function KontaktPage() {
       <HlavickaStranky
         stitek="Kontakt"
         nadpis="Zavolejte, nebo napište"
-        uvod={<p>Pošlete mi fotku místa nebo nákres a domluvíme se. Formulář tu schválně není. Radši si rovnou zavoláme.</p>}
+        uvod={<p>Pošlete mi fotku místa nebo nákres a domluvíme se. Formulář tu schválně není, protože si radši rovnou zavoláme.</p>}
         drobky={[{ nazev: 'Kontakt', href: '/kontakt' }]}
       />
 

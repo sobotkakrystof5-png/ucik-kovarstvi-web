@@ -38,20 +38,20 @@ export const uvod = {
       {
         skupina: 'brany-a-ploty',
         nazev: 'Brány a ploty',
-        veta: 'Vrata, brány, branky a ploty. Podle Vašeho návrhu, nebo podle mých vzorů.',
+        veta: 'Vyrábím vrata, brány, branky i ploty, a to podle Vašeho návrhu nebo podle mých vzorů.',
         foto: f('uvod-vyrobky-01', 'kovaná brána a plot za denního světla', 'Kovaná brána s plotem'),
       },
       {
         skupina: 'mrize-dvere-kovani',
         nazev: 'Mříže a zábradlí',
-        veta: 'Okenní mříže pro nové i historické domy, a k nim',
+        veta: 'Kovám okenní mříže pro nové i historické domy a také',
         odkaz: { text: 'zábradlí na schody a balkony', skupina: 'zabradli-a-balkony' },
         foto: f('uvod-vyrobky-02', 'kovaná mříž nebo schodišťové zábradlí, detail', 'Kované zábradlí a mříž'),
       },
       {
         skupina: 'nabytek-a-interier',
         nazev: 'Nábytek a interiér',
-        veta: 'Postele, stoly, police a svícny do domu, na míru místnosti.',
+        veta: 'Do domu kovám postele, stoly, police i svícny, vždy na míru Vaší místnosti.',
         foto: f('uvod-vyrobky-03', 'kovaný stůl, postel nebo svícen v interiéru', 'Kovaný nábytek v interiéru'),
       },
     ],
@@ -61,13 +61,13 @@ export const uvod = {
   },
   postup: {
     nadpis: 'Jak pracuji',
-    uvod: 'Od prvního telefonu po montáž, v pěti krocích.',
+    uvod: 'Práce probíhá v pěti krocích, od prvního telefonátu až po montáž.',
   },
   kovar: {
     nadpis: 'Kovář',
     text: [
-      'Jsem Jiří Učík a kovám v dílně v Žitenicích u Litoměřic. Navazuji na klasickou kovařinu, a když práci pomůže nový postup, nebráním se mu.',
-      'Kovám věci, které mají vydržet a mají se Vám líbit. Brána před domem stejně jako svícen na stole.',
+      'Jsem Jiří Učík a kovám v dílně v Žitenicích u Litoměřic. Navazuji na klasickou kovařinu, ale když práci pomůže nový postup, použiji ho.',
+      'Kovám věci, které mají vydržet a které se Vám budou líbit, ať už jde o bránu před domem, nebo o svícen na stole.',
     ],
     podpis: 'Jiří Učík',
     portret: f('uvod-kovar-01', 'portrét Jiřího Učíka u výhně', 'Kovář Jiří Učík u výhně'),
@@ -75,7 +75,7 @@ export const uvod = {
   },
   oblast: {
     nadpis: 'Kde pracuji',
-    text: 'Dílnu mám v Žitenicích u Litoměřic. Výrobky vozím a montuji po celém okolí, od Ústí nad Labem a Teplic po Mělník a Prahu.',
+    text: 'Dílnu mám v Žitenicích u Litoměřic a výrobky vozím a montuji po celém okolí, od Ústí nad Labem a Teplic až po Mělník a Prahu.',
   },
   ozvete: {
     nadpis: 'Ozvěte se',

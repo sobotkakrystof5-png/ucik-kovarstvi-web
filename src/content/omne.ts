@@ -27,7 +27,7 @@ export const omne = {
   },
   dilna: {
     nadpis: 'Dílna',
-    text: 'Dílnu mám v Žitenicích, Litoměřická 3, kousek od Litoměřic. Návštěvu si domluvte předem po telefonu.',
+    text: 'Dílnu mám v Žitenicích na adrese Litoměřická 3, kousek od Litoměřic. Návštěvu si prosím domluvte předem po telefonu.',
     doplni: 'krátký popis dílny (výheň, vybavení, jak dlouho tam kove)',
   },
   fotky: {

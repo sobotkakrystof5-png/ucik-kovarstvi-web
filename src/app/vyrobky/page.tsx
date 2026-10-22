@@ -29,8 +29,8 @@ export default function VyrobkyPage() {
         nadpis="Co všechno vykovám"
         uvod={
           <p>
-            Všechno na zakázku, podle Vašeho návrhu nebo podle mého. Rozdělil jsem to do šesti skupin
-            podle toho, kam co patří.
+            Všechno vyrábím na zakázku, podle Vašeho návrhu nebo podle svého. Výrobky jsem rozdělil do
+            šesti skupin podle toho, kam co patří.
           </p>
         }
         drobky={[{ nazev: 'Výrobky', href: '/vyrobky' }]}
