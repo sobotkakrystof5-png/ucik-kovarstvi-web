@@ -75,7 +75,7 @@ export const skupiny: Skupina[] = [
     nazev: 'Brány a ploty',
     kratce: 'Vrata, brány, branky i ploty, které dlouho vydrží a nevyžadují mnoho údržby.',
     text: [
-      'Kovanou bránu, branku nebo plot Vám vykovám podle Vašeho návrhu nebo podle některého z mých vzorů. Kované železo dlouho vydrží, dobře snáší počasí a nevyžaduje mnoho údržby.',
+      'Kovanou bránu, branku nebo plot Vám vykuji podle Vašeho návrhu nebo podle některého z mých vzorů. Kované železo dlouho vydrží, dobře snáší počasí a nevyžaduje mnoho údržby.',
       'Mohu udělat vjezdová vrata i branku k nim, a pokud chcete, tak i celý plot kolem pozemku ve stejném stylu. Hotové dílo Vám přivezu a namontuji.',
     ],
     hero: hero('brany-hero-01', 'kovaná brána u domu za denního světla, celkový pohled', 'Kovaná brána a plot u rodinného domu'),
@@ -137,7 +137,7 @@ export const skupiny: Skupina[] = [
         nazev: 'Kliky, madla, klepadla, panty',
         kratce: 'Kování jako jednotlivý kus nebo jako celá sada ke dveřím.',
         text: [
-          'Kliku, madlo, klepadlo nebo pant vykovám jako jeden kus, nebo jako celou sadu ke dveřím či bráně. Kování držíte v ruce každý den, takže na jeho tvaru záleží víc, než se zdá.',
+          'Kliku, madlo, klepadlo nebo pant vykuji jako jeden kus, nebo jako celou sadu ke dveřím či bráně. Kování držíte v ruce každý den, takže na jeho tvaru záleží víc, než se zdá.',
         ],
         hero: hero('mrize-kovani-hero-01', 'kované klepadlo na dřevěných dveřích, detail', 'Kované klepadlo na dveřích'),
         seo: {
@@ -170,7 +170,7 @@ export const skupiny: Skupina[] = [
     nazev: 'Krby',
     kratce: 'Vyrábím dýmníky, rošty i krbové nářadí.',
     text: [
-      'Ke krbu vykovám dýmník, rošt i soupravu nářadí. Když je všechno z jedné dílny, jednotlivé kusy k sobě dobře pasují.',
+      'Ke krbu vykuji dýmník, rošt i soupravu nářadí. Když je všechno z jedné dílny, jednotlivé kusy k sobě dobře pasují.',
     ],
     hero: hero('krby-hero-01', 'krb s kovaným roštem a soupravou nářadí', 'Krb s kovaným roštem a krbovým nářadím'),
     seo: {
@@ -185,7 +185,7 @@ export const skupiny: Skupina[] = [
         nazev: 'Dýmníky a rošty',
         kratce: 'Vyrobené na rozměr Vašeho krbu.',
         text: [
-          'Dýmník i rošt vykovám na rozměr Vašeho krbu. Tvar domluvíme podle toho, jak krb vypadá a jak se v něm topí.',
+          'Dýmník i rošt vykuji na rozměr Vašeho krbu. Tvar domluvíme podle toho, jak krb vypadá a jak se v něm topí.',
         ],
         hero: hero('krby-dymniky-hero-01', 'kovaný dýmník nad otevřeným krbem', 'Kovaný dýmník nad krbem'),
         seo: {
@@ -199,7 +199,7 @@ export const skupiny: Skupina[] = [
         nazev: 'Krbové nářadí',
         kratce: 'Krbové soupravy včetně stojanu.',
         text: [
-          'Krbovou soupravu vykovám jako celek i se stojanem. Tvar a zdobení přizpůsobím krbu a místnosti, ve které bude stát.',
+          'Krbovou soupravu vykuji jako celek i se stojanem. Tvar a zdobení přizpůsobím krbu a místnosti, ve které bude stát.',
         ],
         hero: hero('krby-naradi-hero-01', 'kovaná krbová souprava na stojanu vedle krbu', 'Kovaná krbová souprava se stojanem'),
         seo: {
@@ -258,7 +258,7 @@ export const skupiny: Skupina[] = [
         nazev: 'Svícny',
         kratce: 'Svícny na stůl i na zeď.',
         text: [
-          'Svícen na stůl nebo na zeď vykovám tak, aby ladil s ostatním kováním v domě. Hodí se i jako dárek.',
+          'Svícen na stůl nebo na zeď vykuji tak, aby ladil s ostatním kováním v domě. Hodí se i jako dárek.',
         ],
         hero: hero('nabytek-svicny-hero-01', 'kovaný svícen se zapálenou svíčkou', 'Kovaný svícen'),
         seo: {
@@ -318,7 +318,7 @@ export const skupiny: Skupina[] = [
         nazev: 'Vývěsní štíty, kříže, meče',
         kratce: 'Vývěsní štíty, kostelní kříže včetně renovací a kované meče.',
         text: [
-          'Vykovám vývěsní štít k Vaší provozovně, kostelní kříž nebo kovaný meč. Kostelní kříže a další kované kostelní prvky umím vyrobit nově i renovovat.',
+          'Vykuji vývěsní štít k Vaší provozovně, kostelní kříž nebo kovaný meč. Kostelní kříže a další kované kostelní prvky umím vyrobit nově i renovovat.',
         ],
         hero: hero('zakazky-stity-hero-01', 'kostelní kříž nebo vývěsní štít, celkový pohled', 'Kovaný kostelní kříž'),
         seo: {
@@ -332,7 +332,7 @@ export const skupiny: Skupina[] = [
         nazev: 'Zahrada',
         kratce: 'Zahradní stolky, židle a další kované prvky do zahrady.',
         text: [
-          'Na zahradu vykovám stolky a židle, které vydrží venku, a dá se domluvit i na dalších kovaných prvcích.',
+          'Na zahradu vykuji stolky a židle, které vydrží venku, a dá se domluvit i na dalších kovaných prvcích.',
         ],
         hero: hero('zakazky-zahrada-hero-01', 'kovaný zahradní stolek se židlemi v zahradě', 'Kovaný zahradní stolek a židle'),
         seo: {

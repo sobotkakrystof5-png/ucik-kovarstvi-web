@@ -64,7 +64,7 @@ export default function UvodPage() {
       </section>
       <ChladnouciPrechod smer="z-uhlu" />
 
-      {/* 2. Co vykovám: tři dlaždice různých velikostí, pod nimi textový výpis */}
+      {/* 2. Co vykuji: tři dlaždice různých velikostí, pod nimi textový výpis */}
       <section className={`wrap ${styles.co}`} aria-labelledby="co-nadpis">
         <h2 id="co-nadpis" className={styles.coTitle}>
           {coVykovam.nadpis}
@@ -101,7 +101,7 @@ export default function UvodPage() {
           })}
         </ul>
         <p className={styles.coRest}>
-          Ke krbu vykovám <Link href="/vyrobky/krby">dýmník, rošt i nářadí</Link>. Dělám také{' '}
+          Ke krbu vykuji <Link href="/vyrobky/krby">dýmník, rošt i nářadí</Link>. Dělám také{' '}
           <Link href="/vyrobky/zakazky-na-prani">zakázky na přání</Link>, například vývěsní štíty, kostelní
           kříže, meče nebo zvoneček na dům.{' '}
           <Link href="/vyrobky" className={styles.coAll}>

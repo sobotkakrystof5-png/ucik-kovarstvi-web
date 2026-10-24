@@ -75,6 +75,12 @@ Aby to budoucí session „neopravila“ jako chybu.
 
 Nejnovější nahoře.
 
+### 2026-10-24 — „vykovám“ nahrazeno spisovným „vykuji“
+- **Co:** Ve všech textech (`src/`) a v `web-project-brief.md` nahrazeno „vykovám/Vykovám“ za „vykuji/Vykuji“, včetně hero nadpisu („Vykuji Vám bránu, která vydrží generace.“) a nadpisů „Co vykuji“, „Co všechno vykuji“. Identifikátor `coVykovam` v kódu zůstal.
+- **Proč:** na pokyn uživatele; „vykovu“ není správný tvar, uživatel zvolil „vykuji“.
+- **Dopad:** hero a nadpisy mají formálnější tón než dřív; starší záznamy changelogu níže citují původní znění. SEO `title`/`description` se netýká.
+- **Soubory:** `src/content/uvod.ts`, `src/content/vyrobky.ts`, `src/app/page.tsx`, `src/app/vyrobky/page.tsx`, `src/app/vzornik/page.tsx`, `src/app/uvod.module.css`, `web-project-brief.md`
+
 ### 2026-10-22 — Texty webu: plynulejší věty místo úsečných útržků
 - **Co:** Viditelné texty přepsány do prostšího, souvislého stylu (celé věty se spojkami místo útržků typu „Na stůl i na zeď.“). Dotčeno: Úvod (dlaždice, Jak pracuji, Kovář, Kde pracuji), krátké i delší popisy všech skupin a kategorií, pět kroků postupu, O mně (Dílna), úvody Kontaktu a Výrobků, text u Vzorů, úvody částí Realizací („Najdete tu …“). Obsah a fakta beze změny, nic nepřibylo.
 - **Proč:** na pokyn uživatele, vzor stylu dodal uživatel (cizí text z jiné dílny, převzat byl jen styl, ne fakta ani věty).

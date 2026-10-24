@@ -24,7 +24,7 @@ export const uvod = {
   },
   hero: {
     // Tónová ukázka z briefu §1, schválená klientem jako hlas webu
-    nadpis: 'Vykovám Vám bránu, která vydrží generace.',
+    nadpis: 'Vykuji Vám bránu, která vydrží generace.',
     podpis: 'Jiří Učík, umělecký kovář, Žitenice',
     foto: f(
       'uvod-hero-01',
@@ -33,7 +33,7 @@ export const uvod = {
     ),
   },
   coVykovam: {
-    nadpis: 'Co vykovám',
+    nadpis: 'Co vykuji',
     dlazdice: <Dlazdice[]>[
       {
         skupina: 'brany-a-ploty',

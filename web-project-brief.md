@@ -60,7 +60,7 @@ Když si nejsi jistý, jestli prvek nepůsobí šablonovitě, zeptej se nebo nav
 
 **Cíl webu:** ukázat práci, vzbudit důvěru v člověka a přivést poptávky telefonem a e-mailem. Web **nemá poptávkový formulář** (rozhodnutí klienta). Každá stránka musí vést k jedné akci: zavolat nebo napsat.
 
-**Tón:** lidský, osobní, přirozený. Mluví sám kovář v první osobě („vykovám“, „přijedu namontovat“), zákazníka oslovuje „Vy“. Krátké věty, žádná firemní fráze. Například „Vykovám Vám bránu, která vydrží generace“, ne „Nabízíme komplexní služby v oblasti kovovýroby“.
+**Tón:** lidský, osobní, přirozený. Mluví sám kovář v první osobě („vykuji“, „přijedu namontovat“), zákazníka oslovuje „Vy“. Krátké věty, žádná firemní fráze. Například „Vykuji Vám bránu, která vydrží generace“, ne „Nabízíme komplexní služby v oblasti kovovýroby“.
 
 **Pravidla pro české texty** (podle skillu humanize-text-cs; pokud ho máš lokálně, použij ho na každý text před dokončením stránky):
 - Žádné dlouhé ani krátké pomlčky jako spojka uprostřed věty. Použij čárku, tečku nebo spojku.
@@ -183,7 +183,7 @@ Skill `craftsman-site-layout` slouží jen jako kontrolní seznam struktury pods
 
 ### Úvod `/`
 1. **Úvodní scéna:** tmavá fotka výhně nebo rozžhaveného železa přes celou šířku, stoupající jiskry, nadpis H1 vlevo dole (konkrétní, v hlasu kováře, bez roku do ověření). Pod ním „Jiří Učík, umělecký kovář, Žitenice“ a dvě akce: velké **Zavolat 603 582 254** a menší **Prohlédnout realizace** (`/realizace`).
-2. **Co vykovám:** tři velké fotodlaždice různých velikostí (Brány a ploty, Mříže a zábradlí, Nábytek a interiér) s odkazy na skupiny. Pod nimi krátký textový výpis ostatních skupin. Žádná řada stejných karet s ikonkami.
+2. **Co vykuji:** tři velké fotodlaždice různých velikostí (Brány a ploty, Mříže a zábradlí, Nábytek a interiér) s odkazy na skupiny. Pod nimi krátký textový výpis ostatních skupin. Žádná řada stejných karet s ikonkami.
 3. **Vybrané realizace:** vodorovný pás 6 fotek s popisem vzoru a místa (např. „brána Fort, Litoměřicko“), odkaz na `/realizace`.
 4. **Jak pracuji:** pět kroků (nápad, návrh a nákres, kování, povrchová úprava, doprava a montáž) propojených jednou kovanou linkou, která se na konci stočí do voluty se žhavým bodem.
 5. **O kováři:** portrét u výhně, krátký osobní text v první osobě a podpis (dočasně textový, později sken podpisu). Odkaz na `/o-mne`.
@@ -271,7 +271,7 @@ Počty a umístění:
 | Stránka / sekce | Počet | Co má fotka ukazovat | Poměr |
 |---|---|---|---|
 | Úvod: úvodní scéna | 1 | Výheň nebo rozžhavené železo na kovadlině, tmavé teplé světlo | 16:9 (mobil 4:5) |
-| Úvod: Co vykovám | 3 | Brána a plot; mříž nebo zábradlí; interiérový výrobek | 4:5, 1:1, 3:2 |
+| Úvod: Co vykuji | 3 | Brána a plot; mříž nebo zábradlí; interiérový výrobek | 4:5, 1:1, 3:2 |
 | Úvod: Vybrané realizace | 6 | Hotové realizace z různých skupin | 3:2 |
 | Úvod: Jak pracuji | 5 | Nápad, nákres, kování, povrchová úprava, montáž | 1:1 |
 | Úvod: O kováři | 2 | Portrét u výhně; detail rukou s kladivem | 4:5, 3:2 |

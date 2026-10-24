@@ -71,7 +71,7 @@ export function StrankaRealizaci({ cast, fotky }: Props) {
 
         {skupina && (
           <p className={styles.vyrobky}>
-            <Link href={skupinaHref(skupina)}>Co všechno vykovám: {skupina.nazev}</Link>
+            <Link href={skupinaHref(skupina)}>Co všechno vykuji: {skupina.nazev}</Link>
           </p>
         )}
       </div>

@@ -26,7 +26,7 @@ export default function VyrobkyPage() {
     <>
       <HlavickaStranky
         stitek="Výrobky"
-        nadpis="Co všechno vykovám"
+        nadpis="Co všechno vykuji"
         uvod={
           <p>
             Všechno vyrábím na zakázku, podle Vašeho návrhu nebo podle svého. Výrobky jsem rozdělil do
