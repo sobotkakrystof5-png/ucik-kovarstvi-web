@@ -75,6 +75,12 @@ Aby to budoucí session „neopravila“ jako chybu.
 
 Nejnovější nahoře.
 
+### 2026-10-25 — „vykuji“ nahrazeno „vykovu“
+- **Co:** Ve všech textech (`src/`) a v `web-project-brief.md` nahrazeno „vykuji/Vykuji“ za „vykovu/Vykovu“ (hero „Vykovu Vám bránu, která vydrží generace.“, nadpisy „Co vykovu“, „Co všechno vykovu“ a věty v `vyrobky.ts`, `page.tsx`, `StrankaRealizaci.tsx`). Obrácení předchozí změny z 2026-10-24.
+- **Proč:** na pokyn uživatele.
+- **Dopad:** tvar „vykovu“ je platný, jen méně běžný než „vykuji“ a působí trochu archaicky/nářečně. SEO `title`/`description` se netýká.
+- **Soubory:** `src/content/{uvod,vyrobky}.ts`, `src/app/{page,vyrobky/page,vzornik/page}.tsx`, `src/app/uvod.module.css`, `src/components/realizace/StrankaRealizaci.tsx`, `web-project-brief.md`
+
 ### 2026-10-24 — „vykovám“ nahrazeno spisovným „vykuji“
 - **Co:** Ve všech textech (`src/`) a v `web-project-brief.md` nahrazeno „vykovám/Vykovám“ za „vykuji/Vykuji“, včetně hero nadpisu („Vykuji Vám bránu, která vydrží generace.“) a nadpisů „Co vykuji“, „Co všechno vykuji“. Identifikátor `coVykovam` v kódu zůstal.
 - **Proč:** na pokyn uživatele; „vykovu“ není správný tvar, uživatel zvolil „vykuji“.

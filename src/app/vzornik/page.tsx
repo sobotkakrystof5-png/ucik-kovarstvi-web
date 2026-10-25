@@ -66,7 +66,7 @@ export default function Vzornik() {
       <section className={`wrap ${styles.section}`}>
         <h2>Typografie</h2>
         <div className={styles.type}>
-          <p className={styles.h1demo}>Vykuji Vám bránu, která vydrží.</p>
+          <p className={styles.h1demo}>Vykovu Vám bránu, která vydrží.</p>
           <h2>Nadpis druhé úrovně ve Fraunces</h2>
           <h3>Nadpis třetí úrovně</h3>
           <p className="lead">
